@@ -1,0 +1,15 @@
+span.italicat {
+    font-style: italic;
+}
+
+span.catBreed {
+    background-color: yellow;
+}
+
+.catSenses {
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 23px;
+    margin: auto auto auto 44px;
+}
+
