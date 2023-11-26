@@ -10,6 +10,52 @@ span.catBreed {
     text-decoration: underline;
     font-weight: bolder;
     font-size: 23px;
-    margin: auto auto auto 44px;
+    margin: auto auto auto 47px;
 }
 
+.catList{
+    margin: 15px auto auto 55px;
+}
+
+.orderList{
+    list-style-type:upper-roman;
+}
+.mediaTitle{
+    text-align: center;
+}
+
+.catImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
+    height: 390px;
+    border: 6px solid orange;
+}
+
+.charBehav{
+    color: red;
+    text-align: center;
+    border: 2px solid red;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableChar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, tr, td {
+    border: 1px solid black;
+}
+
+.lionImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
+    height: 390px;
+    border: 6px solid orange;
+}
