@@ -1,10 +1,9 @@
 .navBar {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(197, 69, 69);
     overflow: hidden;
-    padding-bottom: px;
-    margin-right: 120px;
+    /* margin-right: px; */
     /* margin-left: 340px; */
     width: 100%;
     padding-top: 2px;
@@ -13,20 +12,53 @@
   .navBar div {
     display: flex;
     align-items: center;
-    margin-right: 120px;
+    margin-right: 220px;
   }
 
   .navBar a {
-    display: flex;
-    align-items: center;
-    margin-left: 240px;
+    margin-left: 550px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .signIn {
+    color: white;
     background-color: rgb(43, 119, 226);
-    border-radius: 2px;
+    border-radius: 8px;
     width: 67px;
     height: 24px;
-    padding-top: 2px;
+    padding: 11px 12px 8px 9px;
     text-align: center;
   }
+
+  .signMiddle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("pexels-pixabay-235990.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 220px;
+    padding-bottom: 340px;
+    padding-right: 520px;
+    padding-left: 520px;
+
+    /* padding-top: 220px;
+    padding-bottom: 340px;
+    padding-right: 520px;
+    padding-left: 520px;
+    background-image: url("pexels-pixabay-235990.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-size: 47px;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-weight: bold; */
+  }
+
+  .subbut {
+    width: 440px;
+  }
+
 
