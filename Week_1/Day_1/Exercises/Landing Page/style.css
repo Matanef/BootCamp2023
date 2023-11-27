@@ -1,24 +1,32 @@
 .navBar {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(207, 90, 90);
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
-    padding-bottom: 10px;
-    position: fixed;
-    margin-left: 340px;
-    width: 80%;
+    padding-bottom: px;
+    margin-right: 120px;
+    /* margin-left: 340px; */
+    width: 100%;
+    padding-top: 2px;
   }
 
   .navBar div {
     display: flex;
     align-items: center;
-    margin-left: 40px;
+    margin-right: 120px;
+  }
+
+  .navBar a {
+    display: flex;
+    align-items: center;
+    margin-left: 240px;
   }
   .signIn {
     background-color: rgb(43, 119, 226);
     border-radius: 2px;
     width: 67px;
     height: 24px;
+    padding-top: 2px;
     text-align: center;
   }
 
