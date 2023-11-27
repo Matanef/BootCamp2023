@@ -1,0 +1,16 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+  }
+
+  .navBar div {
+    display: flex;
+  }
+
+
