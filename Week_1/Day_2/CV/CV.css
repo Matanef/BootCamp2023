@@ -1,3 +1,11 @@
+div h5 {
+    font-family: 'Teko', sans-serif;
+    font-size: 34px;
+    margin: 57px;
+}
+p {
+    margin-left: 7px;  
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -29,14 +37,16 @@
 
 .work {
     width: 99.2%;
-    height:81%;
+    height: 75%;
     background-color: rgb(255, 255, 255);
     margin: 2px;
-    
-    margin-top: -54px;
+    margin-top: -53px;
 }
 
 .time_inpar{
+    
+    margin: 40px;
+    margin-top: -20px;
 
 }
 .init{
@@ -48,14 +58,11 @@
 
 
 }
-p {
-    margin-left: 7px;
-    
-    
-}
+
 .sub_init{
     font-weight: bold;
 	font-size: 16px;
+
 }
 
 .init_add{
@@ -67,11 +74,14 @@ p {
     margin:0;
     padding:0;
     width: 99.2%;
-    height: 8.1%;
+    height: 16%;
     background-color: rgb(255, 255, 255);
     margin: 2px;
     margin-top: -50px;
-    font-size: ;
+}
+.paragraphs{
+    margin-top: -20px;
+    margin-left: 66px ;
 }
 
 
@@ -100,7 +110,7 @@ p {
 }
 .information {
     width: 98.0%;
-    height: 15%;
+    height: 25%;
     background-color: rgb(255, 255, 255);
     margin: 3px;
     margin-top: -9px;
@@ -109,15 +119,14 @@ p {
 .education {
     margin-top: -42px;
     width: 98.0%;
-    height: 20%;
+    height: 29%;
     background-color: rgb(255, 255, 255);
     margin: 3px;
     margin-top: -9px;
 }
 .skills{
-    margin-top: -100px;
     width: 98.0%;
-    height: 33%;
+    height: 36.3%;
     background-color: rgb(255, 255, 255);
     margin: 3px;
 }
@@ -127,13 +136,9 @@ h4 {
     font-size: 34px;
     }
 
-h5 {
-    margin-left: 25px;
-    font-size: 34px;
-    font-family: 'Teko', sans-serif
-}
+
 ul {
 	font-weight: initial;
 	font-size: 14px;
-	margin-top: -7px;
+	margin-top: 12z12zpx;
 }
