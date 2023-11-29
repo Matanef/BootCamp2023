@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    width: 890px;
+    height: 1080px;
+    position: absolute;
+}
+
+.leftColumn {
+    background-color: aquamarine;
+    width: 66%;
+    height: 99.4%;
+    position: absolute;
+    margin: 3px;
+    margin-bottom: 3px ;
+}
+
+.name {
+    width: 583px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    margin: 2px;
+}
+.nameImg {
+    height: 100%;
+}
+
+.work {
+    width: 583px;
+    height: 850px;
+    background-color: blueviolet;
+    margin: 2px;
+}
+
+.misc {
+    width: 583px;
+    height: 116px;
+    background-color: blueviolet;
+    margin: 2px;
+}
+
+
+.rightCulomn {
+    background-color: blue;
+    width: 33%;
+    height: 99.4%;
+    position: absolute;
+    margin:3px 66.7%;
+}
+
+.portrait {
+    width: 98.0%;
+    height: 100px;
+    background-color: rgb(212, 144, 54);
+    margin: 3px;
+}
+
+.information {
+    width: 98.0%;
+    height: 847px;
+    background-color: rgb(212, 144, 54);
+    margin: 3px;
+}
+
+.education {
+    width: 98.0%;
+    height: 116px;
+    background-color: rgb(212, 144, 54);
+    margin: 3px;
+}
