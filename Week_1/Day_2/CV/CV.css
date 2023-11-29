@@ -134,11 +134,27 @@ p {
 h4 {
     margin: 12px 12px;
     font-size: 34px;
+    
     }
 
 
 ul {
 	font-weight: initial;
 	font-size: 14px;
-	margin-top: 12z12zpx;
+	margin-top: 12px;
+}
+.skill_list{
+margin-top: 105px;
+margin-left: 45px;
+}
+.edulist{
+    margin-top: 50px;
+margin-left: 25px;
+margin-right: 24px;
+}
+.contlist {
+    margin-top: 75px;
+    margin-left: 50px;
+    margin-right: 24px;
+
 }
