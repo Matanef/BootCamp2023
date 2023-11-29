@@ -16,6 +16,7 @@ p {
 }
 
 .leftColumn {
+    border-radius: 14px;
     background-color: rgb(146, 146, 146);
     width: 66%;
     height: 99.4%;
@@ -25,6 +26,7 @@ p {
 }
 
 .name {
+    border-radius: 14px;
     width: 99.2%;
     height: 8%;
     background-color: rgb(255, 255, 255);
@@ -36,6 +38,7 @@ p {
 }
 
 .work {
+    border-radius: 14px;
     width: 99.2%;
     height: 75%;
     background-color: rgb(255, 255, 255);
@@ -71,6 +74,7 @@ p {
 }
 
 .misc {
+    border-radius: 14px;
     margin:0;
     padding:0;
     width: 99.2%;
@@ -86,6 +90,7 @@ p {
 
 
 .rightCulomn {
+    border-radius: 14px;
     background-color: rgb(163, 163, 163);
     width: 33%;
     height: 99.4%;
@@ -94,6 +99,7 @@ p {
 }
 
 .portrait {
+    border-radius: 14px;
     display: flex;
     justify-content: center;
     width: 98.0%;
@@ -109,6 +115,7 @@ p {
 
 }
 .information {
+    border-radius: 14px;
     width: 98.0%;
     height: 25%;
     background-color: rgb(255, 255, 255);
@@ -117,6 +124,7 @@ p {
 }
 
 .education {
+    border-radius: 14px;
     margin-top: -42px;
     width: 98.0%;
     height: 29%;
@@ -125,10 +133,12 @@ p {
     margin-top: -9px;
 }
 .skills{
-    width: 98.0%;
-    height: 36.3%;
+    border-radius: 14px;
+    width: 98.1%;
+    height: 36.9%;
     background-color: rgb(255, 255, 255);
     margin: 3px;
+    margin-top: -9px;
 }
 
 h4 {
