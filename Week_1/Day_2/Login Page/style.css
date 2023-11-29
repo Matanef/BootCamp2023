@@ -21,7 +21,7 @@
 .email {
 
 }
-#p_for_mail{
+#p_for_mail, #p_for_password{
     margin-top: 35px;
     width: 420px;
     height: 22px;
@@ -43,5 +43,14 @@
     height: 100%;
     background-color: rgb(255, 55, 0);
     position: absolute;
-    margin: 50%;
+    margin-left: 50%;
+}
+
+.logIn {
+    font-family: "Inknut Antiqua Handgloves", sans-serif, Times;
+}
+
+.form {
+    margin-left: 100px;
+    margin-top: 150px;
 }
