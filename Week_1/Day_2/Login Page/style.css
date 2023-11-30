@@ -76,9 +76,13 @@
 }
 .helloFriend {
     text-align: center;
+    font-family: "Oswald", Georgia, 'Times New Roman', Times, serif;
+    font-size: 49px;
 }
 .regText {
+    margin-top: -20px;
     text-align: center;
+    font-family: "Oswald", Georgia, 'Times New Roman', Times, serif;
 }
 
 .regbutton {
