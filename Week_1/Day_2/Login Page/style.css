@@ -20,7 +20,7 @@
     height: 100%;
     background-color: rgb(255, 255, 240);
     position: absolute;
-    border-radius: 6px;
+    border-radius: 12px;
 }
 
 .email {
@@ -38,12 +38,15 @@
     color: aliceblue
   }
 
-  .flexsub{
+  /* .flexsub{
     display: flex;
     justify-content: center;
-}
+} */
 .subbut {
     width: 100px;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .rightSection {
@@ -57,17 +60,25 @@
     background-image: linear-gradient(to bottom right, rgb(24, 24, 24), rgb(171, 15, 232));
     position: absolute;
     margin-left: 50%;
-    border-radius: 6px;
+    border-radius: 12px;
 
 }
 
 .logIn {
+    text-align: center;
+    margin-top: 220px;
     font-family: "Inknut Antiqua Handgloves", sans-serif, Times;
 }
 
 .form {
     margin-left: 100px;
-    margin-top: 150px;
+    margin-top: 30px;
+}
+.helloFriend {
+    text-align: center;
+}
+.regText {
+    text-align: center;
 }
 
 .regbutton {
@@ -75,5 +86,21 @@
     border: 3px solid;
     border-radius: 4px; 
 }
+.rempass {
+    /* margin-left: -339px; */
+    display: flex;
+    justify-content: space-between;
 
+}
 
+.lintpass{
+    margin-right: 120px;
+}
+
+.socialIcons {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-around;
+    padding-left: 140px;
+    padding-right: 140px;
+}
