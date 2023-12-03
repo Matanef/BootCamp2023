@@ -24,21 +24,37 @@
 <div class="centerform">
     <form action="/information_input.txt" class="form">
 		<h2>DOWNLOAD NOW</h2>
-		<label for="firstname">FIRST NAME:</label>
-        <input type="text" name="firstname" required placeholder="First name">
-        <label for="lastname">LAST NAME:</label>
-		<input type="text" name="lastname" required placeholder="Last name">
-		<label for="email">EMAIL</label>
-        <a href="#">(PRIVACY POLICY)</a>
-        <input type="email" name="email" required placeholder="Email">
-        <label for="phonenumber">PHONE NUMBER:</label>
-		<input type="text" name="username" required placeholder="Phone Number">
-        <label for="firstname">WEBSITE URL*:</label>
-		<input type="text" name="websiteurl" required placeholder="Website URL">
-        <label for="company">COMPANY NAME*:</label>
-        <input type="text" name="company_name" required placeholder="Company Name"><br>
-        <label for="employees">HOW MANY EMPLOYEES WORK THERE</label><BR></BR>
+        <div class="form-group">
+            <div>
+		        <label for="firstname">FIRST NAME:</label>
+                <input type="text" name="firstname" required placeholder="First name">
+            </div>
+            <div>
+                <label for="lastname">LAST NAME:</label>
+		        <input type="text" name="lastname" required placeholder="Last name">
+            </div>
+		    <div>
+                <label for="email">EMAIL</label>
+                <a href="#">(PRIVACY POLICY)</a>
+                <input type="email" name="email" class="formt" required placeholder="Email">
+            </div>
+            <div>
+                <label for="phonenumber">PHONE NUMBER:</label>
+		        <input type="text" name="username" class="formt" required placeholder="Phone Number">
+            </div>
+            <div>
+                <label for="firstname" class="formt">WEBSITE URL*:</label>
+		        <input type="text" name="websiteurl" required placeholder="Website URL">
+            </div>
+            <div>
+                <label for="company" class="formt">COMPANY NAME*:</label>
+                <input type="text" name="company_name" required placeholder="Company Name"><br>
+            </div>
+        </div>
+        <div>
+        <label for="employees" class="formt">HOW MANY EMPLOYEES WORK THERE</label><BR></BR>
         <select name="employees" id="employees">
+        </div>
             <option value="-">Please Select</option>
             <option value="1-10">1-10</option>
             <option value="10-20">10-20</option>
@@ -62,9 +78,10 @@
             <option value="ALL">ALL OF THE ABOVE</option>
         </select>
         <br><br>
-        <input type="submit" value="Submit">
-		<input type="submit" value="Submit Form">
-		<input type="reset">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> SUBSCRIBE TO HUBSPOT'S MARKETING BLOG</label><br>
+        <input type="submit" value="DOWNLOAD NOW">
+
     </form>
 </div>
         <script src="" async defer></script>
