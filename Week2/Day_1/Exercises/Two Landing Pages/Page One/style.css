@@ -53,6 +53,9 @@ input[type=submit], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+input[type=text]:focus {
+    background-color: lightblue;
+  }
 
 
 .form {
