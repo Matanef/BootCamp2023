@@ -1,0 +1,32 @@
+.outer{
+    width: 650px;
+    height: 550px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 3px solid red;
+justify-content: space-between;
+
+
+
+
+
+}
+.inner{
+    background-color: royalblue;
+    width: 100%;
+    height: 80px;
+
+
+
+}
+
+.inner-center {
+    background-color: royalblue;
+    height: 80px;
+    width: 50%;
+    /* margin: 10px; */
+    flex: 0.5;
+align-self: flex-end;
+
+}

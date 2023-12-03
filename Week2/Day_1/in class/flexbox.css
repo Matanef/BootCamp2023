@@ -1,14 +1,35 @@
 .container {
-    height: 80vw;
-    width: 50vw;
+    height: 80vh;
+    width: 80vw;
     background-color: grey;
     display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
 }
 
 .element{
-    height: 100px;
-    width: 100px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
     background-color: yellow;
     margin: 10px;
+    flex: 1;
+}
+
+.b {
+    align-self: flex-end;
+    flex: 2;
+    order: 3;
+}
+
+.a {
+    align-self: flex-start;
+    flex: 2.5;
+}
+
+.c {
+    flex: 0.5;
 }
