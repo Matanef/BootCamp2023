@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgb(186, 186, 218);
+    width: auto;
+    height: auto
+
+}
+/* .Lsection {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    
+} */
+
+.Msection {
+display: flex;
+justify-content: space-around;
+
+}
+
+/* .Rsection {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+} */
+
+.square {
+    width: 90px;
+    height: 90px;
+    background-color: yellow;
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-around;
+}
