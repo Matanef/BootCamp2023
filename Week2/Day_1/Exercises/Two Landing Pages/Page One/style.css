@@ -45,7 +45,7 @@ input[type=email], select {
 }
 input[type=submit], select {
     
-    width: 250px;
+    width: 550px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -59,8 +59,8 @@ input[type=text]:focus {
 
 
 .form {
-    background-color: bisque;
-    width: 1250px;
+
+    width: 650px;
     display: flex;
     justify-content: center;
     align-content: space-between;
@@ -70,6 +70,10 @@ input[type=text]:focus {
             display: flex;
             justify-content: center;
             align-content: space-between;
-            flex-wrap: wrap; /* Allow items to wrap to the next row */
-            gap: 10px; /* Adjust the gap between items */
+            flex-wrap: wrap;
+            gap: 10px;
+}
+.form-group > div {
+    flex: 1; /* Each item takes equal space in the row */
+    box-sizing: border-box; /* Include padding and border in the width */
 }
