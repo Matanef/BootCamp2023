@@ -1,10 +1,11 @@
-/* body{
-    display: flex;
+body{
+    /* display: flex;
     flex-direction: column;
-    align-items: center;    
-} */
+    align-items: center;     */
+    color: white;
+}
 .navbar {
-    background-color: aquamarine;
+    background-color: rgb(14, 77, 91);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +16,9 @@ p {
 }
 
 .centerform {
-    width: 1450px;
+    background-image: url("IMG_3544 copy.jpg");
+    background-size: cover;
+    width: 100%;
     height: 700px;
     margin-top: 12px ;
     font-size: 14px;
