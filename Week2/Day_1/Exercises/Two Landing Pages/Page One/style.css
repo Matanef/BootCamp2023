@@ -9,11 +9,17 @@
     flex-direction: column;
     align-items: center;
 }
+p {
+    font-weight: bolder;
+    font-family: "Roboto";
+}
 
 .centerform {
     width: 1450px;
+    height: 700px;
     margin-top: 12px ;
-    background-color: blueviolet;
+    font-size: 14px;
+    background-color: rgb(168, 147, 188);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +41,7 @@ input[type=text], select {
 
 input[type=email], select {
     
-    width: 250px;
+    width: 150px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -44,7 +50,8 @@ input[type=email], select {
     box-sizing: border-box;
 }
 input[type=submit], select {
-    
+    /* display: flex;
+    align-items: flex-start; */
     width: 550px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -52,7 +59,9 @@ input[type=submit], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+
 }
+
 input[type=text]:focus {
     background-color: lightblue;
   }
@@ -60,7 +69,7 @@ input[type=text]:focus {
 
 .form {
 
-    width: 650px;
+    width: 550px;
     display: flex;
     justify-content: center;
     align-content: space-between;
@@ -76,4 +85,9 @@ input[type=text]:focus {
 .form-group > div {
     flex: 1; /* Each item takes equal space in the row */
     box-sizing: border-box; /* Include padding and border in the width */
+}
+
+label {
+    font-weight: bolder;
+    font-family: "Roboto";
 }
