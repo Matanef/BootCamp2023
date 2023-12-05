@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+<style>
+    .container{
+        display: grid;
+        height: 90vh;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        'xs ys ys ys ys'
+        'xs cs cs cs ws'
+        'xs cs cs cs ws'
+        'xs zs zs zs zs';
+        gap: 10px;
+    }
+
+    .el1{
+        background-color: rgb(233, 42, 42);
+        grid-area: xs;
+    }
+
+    .el2{
+        background-color: rgb(63, 165, 42);
+        grid-area: ys;
+    }
+
+    .el3{
+        background-color: rgb(201, 140, 140);
+        grid-area: cs;
+    }
+
+    .el4{
+        background-color: rgb(165, 104, 42);
+        grid-area: ws;
+    }
+
+    .el5{
+        background-color: rgb(42, 44, 165);
+        grid-area: zs;
+    }
+</style>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+
+    <body>
+        <div class="container">
+            <div class="el1"></div>
+            <div class="el2"></div>
+            <div class="el3"></div>
+            <div class="el4"></div>
+            <div class="el5"></div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
