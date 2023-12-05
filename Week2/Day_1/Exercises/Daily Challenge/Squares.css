@@ -8,6 +8,8 @@
 
 }
 .Rsection {
+    background-color: aquamarine;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -15,14 +17,19 @@
 }
 
 .Msection {
-display: flex;
-justify-content: space-around;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
 }
 
 .Lsection {
+    background-color: aquamarine;
+    height: 900px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 
 }
 
@@ -31,5 +38,7 @@ justify-content: space-around;
     height: 90px;
     background-color: yellow;
     border: 3px solid black;
-    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    
 }
