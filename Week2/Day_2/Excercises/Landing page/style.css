@@ -2,7 +2,7 @@ body{
     background-image: url("world-map-306338_1280.jpg");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center center;
+    background-position: bottom;
 
 }
 
@@ -13,21 +13,23 @@ body{
 }
 
 article{
-    height: 150px;
+    height: 75px;
 }
 .grid-col-span-2 {
     grid-column: span 3;
 }
 .container {
-    width: auto;
-    /* height: 720px; */
+    width: 1550px;
+    height: 720px;
     display: grid;
     gap: 20px;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(3, 2fr);
 }
 .flexcard {
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* background-color: brown; */
 }
 .el1 {
@@ -75,21 +77,53 @@ article{
     font-weight: bold;
     opacity: 0.5;
 }
-.el8 {
-
-}
-
-.el11{
-    width: 347px;
-    grid-column: span 2;
-    border: 3px solid black;
-}
 
 img{
-    width: 90px;
-    border-radius: 75%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
+
+.statecard {
+    background-color: ivory;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+ }
 
 .statement {
     background-color: antiquewhite;
 }
+.namestate {
+background-color: tomato;
+}
+.job {
+    background-color: tomato;
+    padding: 20px;
+}
+
+
+/* .el11{
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.el12{
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.el13{
+    grid-column-start: 5;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+} */
