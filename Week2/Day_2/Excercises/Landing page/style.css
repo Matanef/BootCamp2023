@@ -11,6 +11,10 @@ body{
     display: flex;
     justify-content: center;
 }
+
+article{
+    height: 150px;
+}
 .grid-col-span-2 {
     grid-column: span 3;
 }
@@ -22,7 +26,10 @@ body{
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(3, 2fr);
 }
-
+.flexcard {
+    width: 350px;
+    /* background-color: brown; */
+}
 .el1 {
     /* background-image: url("IMG_3544 copy.jpg"); */
     grid-column: 1 / span 3;
@@ -40,36 +47,49 @@ body{
 
 }
 
-.row2-numerical-information {}
-.el2 {
-text-align: center;
-font-size: 46px;
-font-family: 'Montserrat', sans-serif;
-font-weight: bold;
-color: rgb(169, 130, 248);
-}
-
-.el3 {
+.row2-numerical-information {
     text-align: center;
     font-size: 46px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: rgb(169, 130, 248);
-    }
+    display: flex;
+    flex-direction: column-reverse;
 
-    .el4 {
-        text-align: center;
-        font-size: 46px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        color: rgb(169, 130, 248);
-        }
+    
+
+}
+.el2 {
+}
+.el3 {
+}
+.el4 {
+}
 
 .row3-information{
+    text-transform: uppercase;
     display: flex;
     justify-content: center;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    opacity: 0.5;
 }
-/* .element {
-    display: flex;
-    justify-content: center;
-} */
+.el8 {
+
+}
+
+.el11{
+    width: 347px;
+    grid-column: span 2;
+    border: 3px solid black;
+}
+
+img{
+    width: 90px;
+    border-radius: 75%;
+}
+
+.statement {
+    background-color: antiquewhite;
+}
