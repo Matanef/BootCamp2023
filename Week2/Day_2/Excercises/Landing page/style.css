@@ -1,0 +1,75 @@
+body{
+    background-image: url("world-map-306338_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+}
+
+.bodylike {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.grid-col-span-2 {
+    grid-column: span 3;
+}
+.container {
+    width: auto;
+    /* height: 720px; */
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 2fr);
+}
+
+.el1 {
+    /* background-image: url("IMG_3544 copy.jpg"); */
+    grid-column: 1 / span 3;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+    font-size: 46px ;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.imgfirst {
+    width: 220px;
+    border-radius: 8px;
+
+}
+
+.row2-numerical-information {}
+.el2 {
+text-align: center;
+font-size: 46px;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+color: rgb(169, 130, 248);
+}
+
+.el3 {
+    text-align: center;
+    font-size: 46px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(169, 130, 248);
+    }
+
+    .el4 {
+        text-align: center;
+        font-size: 46px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: rgb(169, 130, 248);
+        }
+
+.row3-information{
+    display: flex;
+    justify-content: center;
+}
+/* .element {
+    display: flex;
+    justify-content: center;
+} */
