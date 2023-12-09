@@ -30,11 +30,9 @@ article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: brown; */
+
 }
 .el1 {
-    /* background-image: url("IMG_3544 copy.jpg"); */
-    /* border: 3px solid black; */
     display: flex;
     justify-content: center;
     font-size: 46px ;
@@ -86,11 +84,18 @@ img{
  }
 
 .statement {
+    font-family:"Cabin";
     border-radius: 7px;
     text-align: center;
     background-color: rgb(246, 233, 217);
     width: 200px;
     padding: 10px;
+
+}
+.namestate {
+    font-family:"Cabin";
+    opacity: 0.6;
+    color: rgb(110, 110, 110);
 }
 .el11 {
     margin-top: -110px;
