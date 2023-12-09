@@ -29,12 +29,11 @@ article{
 .flexcard {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     /* background-color: brown; */
 }
 .el1 {
     /* background-image: url("IMG_3544 copy.jpg"); */
-    grid-column: 1 / span 3;
     /* border: 3px solid black; */
     display: flex;
     justify-content: center;
@@ -56,17 +55,9 @@ article{
     font-weight: bold;
     color: rgb(169, 130, 248);
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse;   
+}
 
-    
-
-}
-.el2 {
-}
-.el3 {
-}
-.el4 {
-}
 
 .row3-information{
     text-transform: uppercase;
@@ -82,37 +73,28 @@ img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-top: -24px;
 }
 
 .statecard {
-    background-color: ivory;
-    border-radius: 4px;
+    background-color: tomato;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
+    /* width: 330px; */
  }
 
 .statement {
-    background-color: antiquewhite;
-}
-.namestate {
-background-color: tomato;
-}
-.job {
-    background-color: tomato;
-    padding: 20px;
-}
-
-
-/* .el11{
-    border: 3px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 7px;
+    text-align: center;
+    background-color: rgb(246, 233, 217);
+    width: 200px;
+    padding: 10px;
 }
 
 .el12{
+    background-color: aqua;
     border: 3px solid black;
     display: flex;
     flex-direction: column;
@@ -120,10 +102,11 @@ background-color: tomato;
 }
 
 .el13{
-    grid-column-start: 5;
-    grid-row-start: 1;
+    /* grid-column-start: 5;
+    grid-row-start: 1; */
+    background-color: rgb(210, 242, 210);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid black;
-} */
+    /* border: 3px solid black; */
+}
