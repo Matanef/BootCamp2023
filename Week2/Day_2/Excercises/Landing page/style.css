@@ -77,12 +77,12 @@ img{
 }
 
 .statecard {
-    background-color: tomato;
+    background-color: rgb(252, 222, 217);
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 330px; */
+
  }
 
 .statement {
@@ -92,21 +92,15 @@ img{
     width: 200px;
     padding: 10px;
 }
+.el11 {
+    margin-top: -110px;
+}
 
 .el12{
-    background-color: aqua;
-    border: 3px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgb(186, 240, 240);
 }
 
 .el13{
-    /* grid-column-start: 5;
-    grid-row-start: 1; */
+    margin-top: -50px;
     background-color: rgb(210, 242, 210);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: 3px solid black; */
 }
