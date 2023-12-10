@@ -51,6 +51,100 @@ console.log(myWatchedSeries[1][2]);
 //Finally, console.log the myWatchedSeries array, to see all the modifications you’ve made.
 console.log(myWatchedSeries);
 
+//Exercise 3
+let celTemp = 25
+let ferTemp = ((celTemp/5)*9)+32;
+console.log(ferTemp);
+
+
+//Exercise 4
+
+let c;
+let a = 34;
+let b = 21;
+
+console.log(a+b) //first expression
+// Prediction: 55
+// Actual:55
+
+a = 2;
+
+console.log(a+b) //second expression
+// Prediction:23
+// Actual:23
+
+// c has no value, we just declared it.
+
+
+//Analyse the code below, what will be the outcome? this will be: 75
+console.log(3 + 4 + '5');
 
 
 
+typeof(15)
+// Prediction: number
+// Actual:
+
+typeof(5.5)
+// Prediction:number
+// Actual:number
+
+typeof(NaN)
+// Prediction: NaN
+// Actual:number
+
+typeof("hello")
+// Prediction:string
+// Actual:string
+
+typeof(true)
+// Prediction: boolean
+// Actual:boolean
+
+typeof(1 != 2)
+// Prediction:boolean
+// Actual:boolean
+
+
+
+"hamburger" + "s"
+// Prediction:hamburgers
+// Actual:hamburgers
+
+"hamburgers" - "s"
+// Prediction: not sure because you can maybe add a letter like above but you can't subtrack so maybe nan?
+// Actual:NaN
+
+"1" + "3"
+// Prediction:13
+// Actual:13
+
+"1" - "3"
+// Prediction: Nan
+// Actual: -2
+
+"johnny" + 5
+// Prediction: johnny5
+// Actual: johnny5
+
+"johnny" - 5
+// Prediction: Nan
+// Actual:Nan
+
+99 * "hello"
+// Prediction:Nan
+// Actual: Nan
+
+1 != 1
+// Prediction: false
+// Actual: false
+
+1 == "1"
+// Prediction: true
+// Actual: true
+
+1 === "1"
+// Prediction: not sure, as far as i remember this would check if both operands are similar both in value and type and so if this is a string compared with a number it would be false
+// Actual: false
+
+console.log()
