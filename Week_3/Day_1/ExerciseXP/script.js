@@ -147,4 +147,60 @@ typeof(1 != 2)
 // Prediction: not sure, as far as i remember this would check if both operands are similar both in value and type and so if this is a string compared with a number it would be false
 // Actual: false
 
-console.log()
+console.log("Bob" - "bill")
+
+5 + "34"
+// Prediction:534
+// Actual:534
+
+5 - "4"
+// Prediction: 1
+// Actual:1
+
+10 % 5
+// Prediction:no idea
+// Actual:0
+
+5 % 10
+// Prediction: 1?
+// Actual:5
+
+"Java" + "Script"
+// Prediction: JavaScript
+// Actual: JavaScript
+
+" " + " "
+// Prediction:2 blank spaces? 
+// Actual:i guess so cause i can't see nothing
+
+" " + 0
+// Prediction:0
+// Actual:0
+
+true + true
+// Prediction: 2
+// Actual: 2
+
+true + false
+// Prediction: 1
+// Actual: 1
+
+false + true
+// Prediction: 1
+// Actual: 1
+
+false - true
+// Prediction: -1
+// Actual: -1
+
+!true
+// Prediction: ! is no so false?
+// Actual:false
+
+3 - 4
+// Prediction: -1
+// Actual: -1
+
+"Bob" - "bill"
+// Prediction: Nan
+// Actual: Nan
