@@ -12,3 +12,4 @@ if (wordNot !== -1 && wordBad  !== -1 && wordBad > wordNot){
 let sentArray = sentence.split()
 console.log(sentArray);
 
+    
