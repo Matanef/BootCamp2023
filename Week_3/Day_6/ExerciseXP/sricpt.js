@@ -286,10 +286,42 @@ const details = {
     is: 'Rudolf',
     the: 'raindeer'
   }
+  let result = "";
 for (let sentence in details){
-  console.log(sentence + " " + details[sentence]);
+  console.log(result += sentence+ " " + details[sentence]+ " ");
 }
 
 let entries = Object.entries(details);
 console.log(entries[0] + " " + entries[1]+ " " + entries[2]);
 
+
+const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+
+let namesAlphabetical = names.sort();
+console.log(namesAlphabetical);
+// let firstLetter = names.charAt(0);
+// console.log(firstLetter);
+
+// let resultNames = "";
+// for (let key in names){
+//     console.log(resultNames += names[key][0]);
+//     if (key<5){
+//         continue;
+//     }
+// }
+// console.log(names.length);
+// for (let i= 0;i<names.length; i++){
+//     if (i==6){
+//         console.log(resultNames += names);
+//     }
+// }
+
+let resultNames = "";
+for (let key in namesAlphabetical){
+    if (key<namesAlphabetical.length){
+        resultNames += names[key][0];
+        console.log(resultNames);
+    }
+}
+
+//don't know how to show only the last row
