@@ -60,3 +60,26 @@ function myAge() {
 myAge()
 
 console.log("outside ==>" + age);
+
+for (var i = 0;i<5;i++){
+}
+console.log(i);
+
+//We can see that the i is equals to 5 and we can access it outside of the loop because we use var
+
+
+function exercise1Class(myAge){
+    let momAge = myAge*2
+    let dadAge = momAge*1.2
+    console.log(`moms age is ${momAge} and dad's age is ${dadAge}`);
+}
+
+exercise1Class(39)
+
+
+/*
+Object Method
+*/
+
+this
+console.log(this);
