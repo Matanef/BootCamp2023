@@ -101,16 +101,19 @@ let shoppingList = ["banana", "orange", "apple"]
 
 
 function myBill(){
-    for (let fruit in stock){
-        for (let i =0 ; i<shoppingList.length; i++){
-            if (shoppingList[i] == fruit)
-            console.log("this is" +" "+ fruit + " "+ "and it is in stock")
-            for (let price in prices){
-                console.log(price.)
-            }
+    let total = 0
+    for(let i = 0; i<shoppingList.length ; i++){
+        let fruit = shoppingList[i];
+        // console.log(`This is the fruit "${fruit}"`);
+        // console.log(`This is the how many are in stock ${stock[fruit]}`);
+        // console.log(`This is the price of each fruit in the shopping list ${prices[fruit]}`);
+        if (stock[fruit] >0){
+            total += prices[fruit];
+            console.log(`We have ${fruit}`);
+        }else {
+            console.log(`We ran out of ${fruit}`);
         }
-        // console.log(fruit)
-        
     }
+    console.log(`This is the total price of the shopping list ${total}`);
 }
 myBill()
