@@ -110,6 +110,7 @@ function myBill(){
         if (stock[fruit] >0){
             total += prices[fruit];
             console.log(`We have ${fruit}`);
+            stock[fruit] --;
         }else {
             console.log(`We ran out of ${fruit}`);
         }
@@ -117,3 +118,24 @@ function myBill(){
     console.log(`This is the total price of the shopping list ${total}`);
 }
 myBill()
+
+
+
+function changeEnough(itemPrice, amountOfChange){
+    let wallet = 0;
+    let coins = [0.25, 0.10, 0.05, 0.01];
+    for(let i= 0; i<amountOfChange.length; i++){
+    wallet += Number(amountOfChange[i])*Number(coins[i]);
+    }
+    if (itemPrice <= wallet){
+        return true;
+    }else{
+
+    return false;
+    }
+}
+
+changeEnough(4, [100,0,0,0]);
+// let a = changeEnough(4, [10,0,0,0])
+// console.log(a);
+
