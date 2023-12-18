@@ -135,7 +135,42 @@ function changeEnough(itemPrice, amountOfChange){
     }
 }
 
-changeEnough(4, [100,0,0,0]);
+let a = changeEnough(14.11, [2,100,0,0]);
 // let a = changeEnough(4, [10,0,0,0])
-// console.log(a);
+console.log(a);
 
+
+
+function hotelCost(){
+    let amounOfNights;
+    let perNight=140;
+    do{
+        amounOfNights = prompt("Please enter the amount of nights you would like to stay a he hotel: ");
+        console.log(amounOfNights);
+    }
+    while(isNaN(amounOfNights)||amounOfNights=='')
+        return amounOfNights*perNight
+}
+
+
+let c = hotelCost();
+console.log(c);
+
+function planeRideCost(){
+    let whereTo;
+    do {
+        whereTo = prompt("Please enter the trip destination")
+        whereTo = whereTo.toLowerCase();
+        switch (whereTo){
+            case "london": return "183$"
+            case "paris": return "220$"
+            case "Other Destination": return "300"
+        }
+        // console.log(whereTo)
+    }
+    while(Number(whereTo)||whereTo=='')
+    return whereTo;
+
+}
+let planeRideCostfinal = planeRideCost();
+console.log(planeRideCostfinal)
