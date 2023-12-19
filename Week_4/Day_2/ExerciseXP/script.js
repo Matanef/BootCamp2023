@@ -148,13 +148,14 @@ function hotelCost(){
         amounOfNights = prompt("Please enter the amount of nights you would like to stay a he hotel: ");
         console.log(amounOfNights);
     }
-    while(isNaN(amounOfNights)||amounOfNights=='')
+    while(isNaN(amounOfNights)||amounOfNights==''){
         return amounOfNights*perNight
+}
 }
 
 
-let c = hotelCost();
-console.log(c);
+let hotel = hotelCost();
+console.log(hotel);
 
 function planeRideCost(){
     let whereTo;
@@ -173,4 +174,34 @@ function planeRideCost(){
 
 }
 let planeRideCostfinal = planeRideCost();
-console.log(planeRideCostfinal)
+console.log(planeRideCostfinal);
+
+function rentalCarCost(){
+    let daysToRentCar;
+    let carRentPerDay = 40
+    let discountMoreThanTen = 0.05
+    do{
+        daysToRentCar = prompt("Please enter the amount of days you would like to rent a car: ");
+        console.log(daysToRentCar);
+        if (daysToRentCar>10){
+            return daysToRentCar*carRentPerDay*(1-discountMoreThanTen);
+        }else {
+        return daysToRentCar*carRentPerDay;
+        }
+    }
+    while(isNaN(daysToRentCar)||daysToRentCar=='');
+        
+}
+
+let carForRntal = rentalCarCost();
+console.log(carForRntal);
+
+
+function totalVacationCost(){
+    let totalAmountForTrip= hotelCost()+planeRideCost()+rentalCarCost();
+    alert(`The total cost of the trip is: ${totalAmountForTrip}`)
+    console.log(totalAmountForTrip);   
+}
+
+let finalTripCost = totalVacationCost()
+console.log(finalTripCost);
