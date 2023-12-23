@@ -1,4 +1,4 @@
-
+const MAX_ATTEMPTS = 3;
 function playTheGame(){
     const userAnswer = confirm("Would you like to play a game?");
 
@@ -22,10 +22,11 @@ function playTheGame(){
 }
 
 function compareNumbers(userNumber,computerNumber){
-    const MAX_ATTEMPTS = 3;
-    for (let i =0 ; i<MAX_ATTEMPTS; i++){
+    let attempts = 3;
+    while (attempts>0){
         if (userNumber === computerNumber){
-            alert("WINNER")
+            alert("WINNER");
+            return;
         } else if (userNumber> computerNumber){
             userNumber = prompt(`Your number is bigger then the computer's ${computerNumber}, guess again`)
 
@@ -33,6 +34,7 @@ function compareNumbers(userNumber,computerNumber){
             userNumber = prompt(`Your number is smaller then the computer's ${computerNumber}, guess again`)
 
         }
+        attempts--;
     }
     alert("Out of chances, Goodbye");
 }
