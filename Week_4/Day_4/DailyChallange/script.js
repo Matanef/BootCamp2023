@@ -21,15 +21,17 @@ let solarArray = [
         divPlanets.style.backgroundColor = planet.color;
         planetSection.appendChild(divPlanets)
         console.log(divPlanets);
-    };
 
-    // let moons = planet.moon;
+            // let moons = planet.moon;
     for (let moons of solarArray){
         let divMoons = document.createElement('div');
         divMoons.classList.add('moon');
         divMoons.innerText = planet.moons;
-        moonDivs.style.left = "250px"
-        divPlanets.style.backgroundColor = divPlanets;
+        divMoons.style.left = "250px"
+        divMoons.style.backgroundColor = planet.color;
+        divMoons.style.textAlign = "center"
         planetSection.appendChild(divMoons)
     console.log(divMoons);
     }
+    };
+
