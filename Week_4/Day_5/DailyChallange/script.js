@@ -2,9 +2,9 @@ let userNumber;
 
 do {
     userNumber = parseInt(prompt("With how many bottles would you like to begin"));
- }while (userNumber=0||isNaN(userNumber));
+ }while (userNumber<=0||isNaN(userNumber));
 
-
+let counter = 1; 
 function song(num){
     for (let i =0 ; i<num; i++){
 		let pnoun = '';
