@@ -12,7 +12,6 @@ console.log(submitButton);
 submitButton.addEventListener('click',Calculate)
 
 function Calculate(){
-    event.preventDefault()
     if(inputRadius!==''|| inputRadius!==isNaN()){
         radius = inputRadius.value;
         let newVolume = 4/3 * Math.PI * Math.pow(radius, 3);
@@ -22,7 +21,7 @@ function Calculate(){
     }
 }
 
-console.log(Calculate());
+// console.log(Calculate());
 
 
 
