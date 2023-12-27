@@ -26,3 +26,9 @@ function returnItemsToDefault(){
     }
 }
 // returnItemsToDefault()
+
+let paragraph = document.querySelector('p')
+console.log(paragraph);
+
+paragraph.addEventListener('mouseover',highlight);
+paragraph.addEventListener('mouseout', returnItemsToDefault)
