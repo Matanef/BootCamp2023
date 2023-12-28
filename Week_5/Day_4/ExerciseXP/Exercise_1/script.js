@@ -22,7 +22,8 @@ function newAppPara(){
     const newPara = document.createElement('p');
     newPara.innerText = "Hello World";
     divcontainer.appendChild(newPara);
-    if (newPara.childElementCount==5){
+    console.log(intervalId);
+    if (divcontainer.childElementCount===5){
         clearInterval(intervalId);
     }
 };
