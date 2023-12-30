@@ -2,7 +2,7 @@ let color_col = 3;
 let color_row = 8;
 let color_count = color_col * color_row;
 
-let main_col = 60;
+let main_col = 250;
 let main_row = 40;
 let main_count = main_col * main_row;
 
