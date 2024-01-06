@@ -54,4 +54,8 @@ SELECT last_name, first_name
 from students
 WHERE id= 1 OR id = 3
 
+SELECT last_name, first_name
+from students
+WHERE birth_date >= '2000-01-01'
+
 
