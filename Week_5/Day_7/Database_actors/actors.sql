@@ -59,4 +59,33 @@ UPDATE actors
 SET first_name = 'Maty' 
 WHERE first_name='Matt' AND last_name='Damon';
 
+UPDATE actors 
+SET number_oscars=4 
+WHERE first_name='George' AND last_name='Clooney'
+RETURNING 
+    actor_id,
+    first_name, 
+    last_name,
+    age;
 
+ALTER TABLE actors 
+RENAME COLUMN age
+TO birthdate
+
+SELECT actor_id, first_name, last_name, age, number_oscars
+FROM actors
+
+SELECT actor_id, first_name, last_name, birthdate, number_oscars
+FROM actors
+
+-- DELETE FROM actors
+-- WHERE first_name = 'Harvey'
+-- RETURNING
+-- 	actor_id,
+-- 	first_name,
+-- 	last_name,
+-- 	birthdate;
+
+
+DELETE FROM actors WHERE actor_id=5
+RETURNING actor_id, first_name, last_name, number_oscars;
