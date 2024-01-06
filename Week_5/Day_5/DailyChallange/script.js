@@ -1,5 +1,11 @@
 const tasks = [];
 
+const body = document.body
+let title = document.createElement('h2');
+    title.style.display= "grid";
+    title.style.alignContent= "center";
+    title.innerText = "TO-DO List"
+body.appendChild(title)
 
 function addTask(){
     const inputUser = document.getElementById('inputUser');
@@ -20,19 +26,14 @@ function addTask(){
     const checkBox = document.createElement('input');
     checkBox.type = 'checkbox'
     checkBox.id = `checkbox_${taskId}`;
-    // checkBox.addEventListener('change', doneTask(taskId));
+
 
     const label = document.createElement('label');
     label.setAttribute('for', `checkbox_${taskId}`);
     label.textContent= taskText;
     
-    const deleteButton  = document.createElement('button');
-    deleteButton.innerHTML =  `<i class="fa-regular fa-circle-xmark"></i>`;
-    // deleteButton.addEventListener('click', deleteTask(taskId));
-    
     taskDiv.appendChild(checkBox);
     taskDiv.appendChild(label);
-    taskDiv.appendChild(deleteButton);
 
     taskList.appendChild(taskDiv);
 
