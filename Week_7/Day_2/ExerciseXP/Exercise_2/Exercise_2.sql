@@ -82,10 +82,17 @@ FROM
 	inventory
 
 
+SELECT city.city, country.country
+FROM city
+inner join country
+on city.country_id = country.country_id
+where country.country = 'Israel'
+ORDER BY country.country
 
 
-
-
+select count(1) from film
+where film_id not in (
+select film_id from inventory)
 
 
 
