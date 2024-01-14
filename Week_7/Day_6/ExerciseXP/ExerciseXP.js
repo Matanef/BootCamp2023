@@ -71,13 +71,76 @@
 //we indeed have a global scope variable a=1; however we are reassigning a string value to 'a' inside funcSix
 // and alerting using the value inside the function because we are using the alert inside the function.
 
-let a = 2;
-if (true) {
-    let a = 5;
-    alert(`in the if block ${a}`);
-}
-alert(`outside of the if block ${a}`);
+// let a = 2;
+// if (true) {
+//     let a = 5;
+//     alert(`in the if block ${a}`);
+// }
+// alert(`outside of the if block ${a}`);
 
 // again, when calling the variable inside the block (this time it's an if block and in the above it was function block)
 
 //inside the value will be 5 and outside it will be 2
+
+
+
+//🌟 Exercise 2 : Ternary Operator
+
+// function winBattle(){
+//     return true;
+// }
+
+//Transform the winBattle() function to an arrow function.
+
+// const winBattle = () => true;
+
+// const experiencePoints = winBattle() ? 10 : 1;
+
+// console.log(experiencePoints);
+
+
+// const isString = (value) => typeof value  == 'string'
+// console.log(isString('hello')); 
+// console.log(isString([1, 2, 4, 0]));
+
+
+// const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+
+// colors.forEach((color, index)=> {
+//     console.log(`${index + 1}# choice is ${color}.`);
+// });
+// if (colors.includes("Violet")) {
+//     console.log("Yeah");
+// } else {
+//     console.log("No...");
+// }
+
+// const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+// const ordinal = ["th", "st", "nd", "rd"];
+
+// colors.forEach((color, index) => {
+//     const ordinalIndex = index < 3 ? index + 1 : 0; // Use 0 for "th" after 3rd
+//     const ordinalSuffix = ordinal[ordinalIndex];
+//     console.log(`${index + 1}${ordinalSuffix} choice is ${color}.`);
+// });
+
+// const hasViolet = colors.includes("Violet");
+// console.log(hasViolet ? "Yeah" : "No...");
+
+
+
+let bankAmount = 1000;
+const VATPercentage = 17;
+const expenses = ["+200", "-100", "+146", "+167", "-2900"];
+const calculateVAT = (amount) => {
+    const VAT = (amount * VATPercentage) / 100;
+    return amount + VAT;
+};
+
+const expensesWithVAT = expenses.map((expense) => calculateVAT(parseFloat(expense)));
+expensesWithVAT.forEach((expense) => {
+    bankAmount += expense;
+});
+
+
+console.log(`Your bank account standing at the end of the month is: ${bankAmount}`);
