@@ -129,18 +129,31 @@
 
 
 
-let bankAmount = 1000;
-const VATPercentage = 17;
-const expenses = ["+200", "-100", "+146", "+167", "-2900"];
-const calculateVAT = (amount) => {
-    const VAT = (amount * VATPercentage) / 100;
-    return amount + VAT;
-};
+// let bankAmount = 1000;
+// const VATPercentage = 17;
+// const expenses = ["+200", "-100", "+146", "+167", "-2900"];
+// const calculateVAT = (amount) => {
+//     const VAT = (amount * VATPercentage) / 100;
+//     return amount + VAT;
+// };
 
-const expensesWithVAT = expenses.map((expense) => calculateVAT(parseFloat(expense)));
-expensesWithVAT.forEach((expense) => {
-    bankAmount += expense;
+// const expensesWithVAT = expenses.map((expense) => calculateVAT(parseFloat(expense)));
+// expensesWithVAT.forEach((expense) => {
+//     bankAmount += expense;
+// });
+
+
+// console.log(`Your bank account standing at the end of the month is: ${bankAmount}`);
+
+
+//Ziv's way:
+
+let bankAmount = 1000;
+const VAT = 0.17
+const details = [+200, -100, +146, +167, -2900];
+details.forEach((item, index, arr) => {
+    arr[index] = arr[index] * (1+VAT);
+    bankAmount += arr[index]
 });
 
-
-console.log(`Your bank account standing at the end of the month is: ${bankAmount}`);
+console.log(bankAmount);
