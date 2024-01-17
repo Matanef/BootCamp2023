@@ -86,19 +86,13 @@ formElement();
 
 
 function makeJuice(size) {
-    const ingrediants = [];
-
     function addIngredients(firstIngredient, secondIngredient, thirdIngredient){
-        ingrediants.push(firstIngredient, secondIngredient, thirdIngredient)
         const juiceHtml = `
         The client wants a ${size} juice, containing ${firstIngredient}, ${secondIngredient}, and ${thirdIngredient}`
         document.getElementById('juiceComplete').innerHTML= juiceHtml
     }
 
 addIngredients("Melon", "Pineapple", "Mango");
-    function displayJuice(){
-        
-    }
 }
 
 makeJuice('medium');
