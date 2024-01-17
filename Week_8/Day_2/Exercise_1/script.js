@@ -85,20 +85,35 @@ formElement();
 
 
 
+// function makeJuice(size) {
+//     function addIngredients(firstIngredient, secondIngredient, thirdIngredient){
+//         const juiceHtml = `
+//         The client wants a ${size} juice, containing ${firstIngredient}, ${secondIngredient}, and ${thirdIngredient}`
+//         document.getElementById('juiceComplete').innerHTML= juiceHtml
+//     }
+
+// addIngredients("Melon", "Pineapple", "Mango");
+// }
+
+// makeJuice('medium');
+
+
+
 function makeJuice(size) {
+    const ingredients  =[];
+    
     function addIngredients(firstIngredient, secondIngredient, thirdIngredient){
-        const juiceHtml = `
-        The client wants a ${size} juice, containing ${firstIngredient}, ${secondIngredient}, and ${thirdIngredient}`
-        document.getElementById('juiceComplete').innerHTML= juiceHtml
+        ingredients.push(firstIngredient, secondIngredient, thirdIngredient);
+        
+    }
+    function displayJuice(){
+        const juiceHtml = `The client wants a ${size} juice, containing ${ingredients.join(', ')}`
+        document.getElementById('juiceComplete2').innerHTML= juiceHtml
     }
 
+addIngredients('Apple', 'Orange', 'Carrot');
 addIngredients("Melon", "Pineapple", "Mango");
+displayJuice()
 }
 
 makeJuice('medium');
-
-
-
-
-
-
