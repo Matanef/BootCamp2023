@@ -58,12 +58,50 @@ function formElement() {
 }
 
 function fortune(job,location,partner,children) {
-    console.log(`You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.`);
-}
+    const html = `
+        <div style="display:inline-block; border: 1px solid #000; margin-top: 20px; margin-left:6px; padding:12px">
+            <h2 style="display:inline-block;">You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.</h2>
+        </div>`;
+    document.getElementById('root').innerHTML=html
+    // console.log(`You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.`);
+};
 
 formElement();
 
+(function(){
+    const userName = `John`
+    const html2 = `
+    <p style ="margin-left: 30px;border: 2px solid #5426">Welcome ${userName}</p>`
+    // const html2 = `
+    //     <div style="display:inline-block; border: 1px solid #000; margin-top: 20px; margin-left:6px; padding:12px">
+    //         <h2 style="display:inline-block;">You will be a ${job} in ${location}, and married to ${partner} with ${children} kids.</h2>
+    //     </div>`;
+    const profilePic = `
+    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile" width=25px style="margin-left:45px; margin-top:18px">`
+    document.getElementById('navAdd').innerHTML=html2;
+    document.getElementById('profilePic').innerHTML=profilePic
 
+})()
+
+
+
+function makeJuice(size) {
+    const ingrediants = [];
+
+    function addIngredients(firstIngredient, secondIngredient, thirdIngredient){
+        ingrediants.push(firstIngredient, secondIngredient, thirdIngredient)
+        const juiceHtml = `
+        The client wants a ${size} juice, containing ${firstIngredient}, ${secondIngredient}, and ${thirdIngredient}`
+        document.getElementById('juiceComplete').innerHTML= juiceHtml
+    }
+
+addIngredients("Melon", "Pineapple", "Mango");
+    function displayJuice(){
+        
+    }
+}
+
+makeJuice('medium');
 
 
 

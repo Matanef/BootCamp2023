@@ -150,8 +150,8 @@ let employees = [
 
 function render(arr){
 const html = employees.map((item) => {
-    return `<div style="display:inline-block; border: 1px solid #000; margin: 5px">
-    <h2>${item.firstname} ${item.lastname}</h2>
+    return `<div style="display:inline-block; border: 1px solid #000; margin-left:6px; padding:12px">
+    <h2 style="display:inline-block;">${item.firstname} ${item.lastname}</h2>
     <h4>${item.age}</h4>
     <p>${item.joinedDate}</p>
     </div>`;
