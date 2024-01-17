@@ -17,3 +17,33 @@ console.log([...country]);
 let newArray = [...[,,]];
 console.log(newArray);
 //showes to entries of undefined
+
+const users = [{ firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
+             { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
+             { firstName: 'Jonathan', lastName: 'Baughn', role: 'Enterprise Instructor' },
+             { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
+             { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
+             { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
+             { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}];
+
+let userFirstNames = users.map((name) => {
+    return `Welcome ${name.firstName}`;
+});
+console.log(userFirstNames);
+
+
+const newArr = users.filter((resident) => {
+    return resident.role === "Full Stack Resident";
+});
+console.log(newArr);
+console.log(users);
+
+let arrLast = users.filter((lastname) => {
+    return lastname.role === "Full Stack Resident";
+});
+
+let MapLast = arrLast.map((lastn) => {
+    return lastn.lastName
+});
+console.log(MapLast);
+
