@@ -50,10 +50,12 @@ body {
     font-family: 'Alkatra', system-ui;
     font-size: 47px; 
 }
-#anything2{ 
-    color: white;
-    font-family: 'Alkatra', system-ui;
-    font-size: 47px; 
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
 }
 #divAuthor{
     display: flex;

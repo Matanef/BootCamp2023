@@ -56,4 +56,27 @@ function displayQuote() {
 };    
 
 
+// displayQuote()
+
+document.getElementById('form').addEventListener('submit', function (event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Collect the form data
+    const formData = new FormData(event.target);
+
+    // Log or process the form data as needed
+    console.log(formData.get('quote'));
+    console.log(formData.get('author'));
+    addFunction(formData)
+});
+function addFunction(formData){
+    const idValue = arr[arr.length-1].id+1
+    const newObj = {id: idValue,
+                    author:formData.get('author'), 
+                    quote:formData.get('quote')
+                    };
+    arr.push(newObj)
+
 displayQuote()
+}
