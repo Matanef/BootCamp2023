@@ -47,3 +47,10 @@ let MapLast = arrLast.map((lastn) => {
 });
 console.log(MapLast);
 
+const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+
+let simplestring = epic.reduce((reduce, sentence) => {
+    return reduce + " " + sentence
+});
+console.log(simplestring);
+
