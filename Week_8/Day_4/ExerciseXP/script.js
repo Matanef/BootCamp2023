@@ -61,8 +61,12 @@ const students = [{name: "Ray", course: "Computer Science", isPassed: true},
                {name: "Kimberly", course: "Artificial Intelligence", isPassed: false}, 
                {name: "Jamie", course: "Big Data", isPassed: false}];
 
-const passd = students.filter((pass) =>{
+const passed = students.filter((pass) =>{
     return pass.isPassed
 });
-console.log(passd);
+console.log(passed);
+
+const congratulate = passed.forEach(function(student){
+    console.log(`Good job ${student.name}, you passed the course in ${student.course}`);
+})
 
