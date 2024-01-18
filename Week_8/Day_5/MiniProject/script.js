@@ -26,6 +26,10 @@ const arr = [{
     id: 6,
     author: "Helen Keller",
     quote:"Friedrich Nietzsche"
+},{
+    id: 7,
+    author: "Hadasa Efrati",
+    quote:"If it Hurts, it's healing"
 }]
 
 document.getElementById('button').addEventListener("click", displayQuote);
@@ -41,8 +45,12 @@ function displayQuote() {
         justify-content: center;
         align-items: center;
         color:white>
-        <p id="innerHtml">${randomQ.quote}</p>
-        <p id="innerHtml">${randomQ.author}</p>
+        <div id="divQuote">
+        <p>${randomQ.quote}</p>
+        </div>
+        <div id="divAuthor">
+        <p>${randomQ.author}</p>
+        </div>
         </div>`
         document.getElementById('blank').innerHTML=html
 };    
