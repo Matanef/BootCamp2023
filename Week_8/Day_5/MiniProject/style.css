@@ -1,0 +1,49 @@
+body {
+    background-image: url("darkPattern.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#button{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#titleQuote {
+    width: auto;
+    color: white;
+    font-family: 'Alegreya', serif;
+    font-size: 78px;
+    font-weight: bolder;
+
+}
+
+#titleSmallQuote {
+    margin-top: -20px;
+    color: white;
+    font-family: 'Alegreya', serif;
+    font-size: 27px;
+}
+#quoteContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#blank {
+    color: white;
+    font-family: 'Alkatra', system-ui;
+    font-size: 47px; 
+}
+
