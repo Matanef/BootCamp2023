@@ -63,3 +63,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#buttons{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#displayCount {
+color: white;
+font-size: 24px;
+}
