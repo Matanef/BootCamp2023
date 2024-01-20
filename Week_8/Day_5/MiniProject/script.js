@@ -210,11 +210,26 @@ document.getElementById('byAuthor').addEventListener('submit',function(event){
     const authorInput = document.getElementById('author').value.toLowerCase();
     console.log(authorInput);
     const filteredQuotes = arr.filter((quote) => quote.author.toLowerCase().includes(authorInput));
-    if(filteredQuotes.length >1){
-        randomQ = filteredQuotes[0];
-        displayQuote(authorInput)
+    if(filteredQuotes.length >0){
+        const htmlAuthorSearch = `
+        <div id="quoteContainer" style="display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:white>
+        <div id="divQuote">
+            <p>${filteredQuotes[0].quote}</p>
+        </div>
+        <div id="divAuthor">
+            <p>${filteredQuotes[0].author}</p>
+            <button id="like">Like</button>
+            <span id="likeCount">${filteredQuotes[0].likes}</span>
+        </div>
+        </div>`;
+document.getElementById('blank').innerHTML = htmlAuthorSearch
     }else {
         document.getElementById('blank').innerHTML = "<p>No quotes found for this author</p>";
     }
 
 });
+
