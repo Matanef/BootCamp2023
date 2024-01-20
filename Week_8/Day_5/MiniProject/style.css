@@ -74,3 +74,10 @@ body {
 color: white;
 font-size: 24px;
 }
+
+#byAuthor {
+    margin-right: 77px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
