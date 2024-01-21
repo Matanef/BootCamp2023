@@ -87,3 +87,147 @@ for (let i = 0 ; i<objKeys.length; i++){
 
     console.log(`The ${i+1}# key is: ${key} --- The ${i+1}# is ${value}`);
 }
+
+const address = {
+    street: 'Evergreen Terrace',
+    number: '742',
+    city: 'Springfield',
+    state: 'NT',
+    zip: '49007',
+  };
+  
+const { street: s, city: c, zip: z } = address;
+console.log(s) //Evergreen Terrace
+console.log(c) //Springfield
+console.log(z); //49007
+
+
+const { street, city } = address;
+console.log(street) //Evergreen Terrace
+console.log(city) //Springfield
+  
+  //Other Example
+let {e, f} = { e: 10, f: 20 };
+console.log('e: ',e); // e: 10
+console.log('f: ',f); // f: 20
+
+const student = {
+    name: 'John Doe',
+    age: 16,
+    scores: {
+        maths: 74,
+        english: 63
+    }
+};
+
+// We define 3 local variables: name, maths, science
+// Default value to the variable science, in case the key doesn't exist in the object student
+const { name, scores: {maths,english, science = 50} } = student;
+
+console.log(`${name} scored ${maths} in Maths, ${english} in English and ${science} in Elementary Science.`);
+// John Doe scored 74 in Maths and 50 in Elementary Science.
+
+//essentially, once we are able to reach the keys or values even in a nested object we can just pick the variables and place them as we like.
+
+
+//Object Destructuring Used As An Assignment To A Function
+// Without Destructuring
+function displaySummary(student) {
+    console.log('Hello, ' + student.name);
+    console.log('Your Maths score is ' + (student.scores.maths || 0));
+    console.log('Your English score is ' + (student.scores.english || 0));
+    console.log('Your Science score is ' + (student.scores.science || 0));
+}
+
+// With Destructuring
+// function displaySummary({name, scores: { maths = 0, english = 0, science = 0 }}) {
+//     console.log('Hello, ' + name);
+//     console.log('Your Maths score is ' + maths);
+//     console.log('Your English score is ' + english);
+//     console.log('Your Science score is ' + science);
+// }
+
+displaySummary(student);
+
+let myRandomObject = {
+    name: 'Matan',
+    age: 39,
+    fruits: ['apple', 'banana', 'orange'],
+    nested: { nestedKey: 'nestedValue', nestedKey2: 'nestedValue2' },
+    trueOrFasle: true,
+    anything: null,
+    date: new Date()
+};
+
+console.log(myRandomObject);
+
+function displayMatanObject(myRandomObject){
+    console.log(`hello ${myRandomObject.name}`);
+    console.log(`Your age is: ${myRandomObject.age}`);
+    console.log(`You need to buy: ${myRandomObject.fruits}`);
+    console.log(`This is a nested objects first key value: "${myRandomObject.nested.nestedKey}"`);
+    console.log(`This is a nested objects second key value: "${myRandomObject.nested.nestedKey2}"`);
+    console.log(`True or False value: ${myRandomObject.trueOrFasle}`);
+    console.log(myRandomObject.anything);
+    console.log(myRandomObject.date);
+}
+
+displayMatanObject(myRandomObject)
+
+function displayMatanObject2({name, age, fruits, nested: {nestedKey ,nestedKey2, nestedKey3 = 0}, trueOrFasle, anything,date}){
+    console.log(`hello ${name}`);
+    console.log(`Your age is: ${age}`);
+    console.log(`You need to buy ${fruits}`);
+    console.log(nestedKey2);
+    console.log(trueOrFasle);
+    console.log(anything);
+    console.log(date);
+}
+displayMatanObject2(myRandomObject)
+
+// let newObj = {...'abc'}
+// console.log(newObj) //{ '0': 'a', '1': 'b', '2': 'c' }
+
+let newObj = {...['a', 'b']}
+console.log(newObj) //{ '0': 'a', '1': 'b' }
+
+const user = { name: 'Lydia', age: 21 };
+const admin = { admin: true, ...user };
+console.log(admin);
+
+
+
+
+
+
+let myCar = {
+    color : 'blue',
+    details : {
+      plateNumber: 123,
+      name : "Ford"
+    }
+  }
+  console.log(myCar);
+  console.log(".");
+  console.log(".");
+  let myNewCar = {...myCar}
+  console.log("myNewCar : ", myNewCar) 
+  // myNewCar :  
+  // { 
+  //      color: 'blue', 
+  //      details: { plateNumber: 123, name: 'Ford' } 
+  // }
+  
+  // SHALLOW COPYING
+  myCar.color = "red"
+  console.log("myNewCar.color :", myNewCar.color)
+  // myNewCar.color : blue -- UNCHANGED
+  console.log("myCar.color :", myCar.color)
+  // myCar.color : red -- CHANGED
+  
+  // DEEP COPYING
+  myCar.details.plateNumber = 345
+  console.log("myNewCar.details.plateNumber :", myNewCar.details.plateNumber)
+  // myNewCar.details.plateNumber : 345 -- CHANGED
+  console.log("myCar.details.plateNumber :", myCar.details.plateNumber)
+  // myCar.details.plateNumber : 345 : red -- CHANGED
