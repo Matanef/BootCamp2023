@@ -20,3 +20,9 @@ function allTruthy(){
     });
     return result
 }
+
+
+//Ziv's Way
+const allThruthyZiv = (...arr) => arr.every((item) => item);
+
+allTruthy()
