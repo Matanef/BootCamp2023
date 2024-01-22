@@ -43,8 +43,11 @@ console.log(Object.entries(users));
 
 function arrangeTOarray(){
     for(let [key,value] of Object.entries(users)){
-        console.log(key, value);
+        console.log(key, value*2);
     }
 }
-
 arrangeTOarray()
+
+
+const newArray = Object.entries(users).map(([name, number]) => `[${name}:${number}]`);
+console.log(newArray);
