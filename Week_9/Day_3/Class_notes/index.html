@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- GET, POST -->
+        <form method="POST">
+            Name: <input name="name"/>
+            Email: <input name="email" />
+            <input type="submit" value="Send"/>
+        </form>
+
+        <h2>Get all Users</h2>
+        <form method="GET" action="https://jsonplaceholder.typicode.com/users">
+            id
+            <label for="inputuser">User Input</label>
+            <input type="number" id="inputuser" name="id"><br>
+            <input type="submit" value="Get All Users">
+        </form>
+        <h2>Google Search</h2>
+        <form action="https://www.google.com/search" method="GET">
+            <input name="q">
+            <input type="submit" value="Search Google"/>
+        </form>
+
+
+        <h2>Add Post</h2>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            Title: <input name="title"><br>
+            Body: <input name="body"><br>
+            Author: <input name="userId"><br>
+            <input type="submit" value="add post"/>
+        </form>
+
+        <!-- 
+            1.send a POST request to https://users-18kl.onrender.com/users
+            2. name, email, username
+            3. submit the form
+         -->
+
+
+         <h2>Add User</h2>
+         <form action="https://users-18kl.onrender.com/user" method="POST">
+             Name: <input name="name"><br>
+             Username: <input name="username"><br>
+             Email: <input name="email"><br>
+             <input type="submit" value="add user"/>
+         </form>
+
+         <div id="root"></div>
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>
