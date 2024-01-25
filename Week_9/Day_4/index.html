@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        <!-- <form method="GET" id="root">
+            <label for="name" >Name</label><br>
+            <input type="text" id="name" name="name"><br>
+            <br>
+            <label for="comment">Comments</label><br>
+            <textarea name="comment" id="comment" rows="6" cols="25">Text Text Text</textarea><br>
+            <input type="submit" value="Send">
+        </form> -->
+<!-- Information will be presented in the url -->
+
+<form action="php-example.php" method="POST" id="root">
+    <label for="name" >Name</label><br>
+    <input type="text" id="name" name="name"><br>
+    <br>
+    <label for="comment">Comments</label><br>
+    <textarea name="comment" id="comment" rows="6" cols="25">Text Text Text</textarea><br>
+    <input type="submit" value="Send">
+</form>
+<!-- when using POST the data will not be presented in the URL ;howevenr we can still find it in the network
+     tab in the developer tool of the browser -->
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
