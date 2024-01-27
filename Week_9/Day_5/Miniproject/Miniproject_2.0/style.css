@@ -5,6 +5,11 @@
     font-family: 'Cabin', sans-serif;
     font-family: 'Quicksand', sans-serif;
 }
+#title{
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-size: 24px;
+    color: rgb(16, 22, 66);
+}
 body{
   min-height: 100vh;  
   background-color: #6556cd;
@@ -62,7 +67,7 @@ h1{
 .search-container{
     margin-top: 6px;
     width: 250px;
-    margin-left: auto;
+    margin-left: 350px;
     display: grid;
     grid-template-columns: 2fr 0.1fr;
     justify-content:center;
