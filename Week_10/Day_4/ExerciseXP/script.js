@@ -4,9 +4,16 @@ const sayHey = ()=>{
 sayHey()
 
 const api_key= 'hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My';
-const dataUrl = 'https://api.giphy.com/v1/gifs/search?q=hilarious&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My';
+const dataUrl = 'https://api.giphy.com/v1/gifs/search';
+const limit = 10;
+const offset = 2;
+const q = "sun"
+const rating= "g"
 
-fetch(dataUrl)
+
+const fullUrl = `${dataUrl}?q=${q}&limit=${limit}&offset=${offset}&api_key=${api_key}`;
+
+fetch(fullUrl)
 .then(response =>{
     console.log(response);
     if (!response.ok){
@@ -24,7 +31,8 @@ fetch(dataUrl)
 const Data = (gifInfo) => {
     const {id, rating, title} = gifInfo[0]
     const paragraph = document.querySelector("#gif_cont");
-    paragraph.textContent = `${id} ${rating} ${title}`;
+    paragraph.textContent = `GIF ID: ${id}
+     ${rating} ${title}`;
 }
 
 
@@ -34,7 +42,7 @@ const displayError = (error) => {
 }
 
 const getGif = () => {
-    fetch(dataUrl)
+    fetch(fullUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
