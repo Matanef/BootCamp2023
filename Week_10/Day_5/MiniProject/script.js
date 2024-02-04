@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameSpan = document.getElementById('name');
     const heightSpan = document.getElementById('height');
     const genderSpan = document.getElementById('gender');
+    const eyeColorSpan = document.getElementById('eyecolor');
     const birthYearSpan = document.getElementById('birth-year');
     const homeWorldSpan = document.getElementById('home-world');
     const getCharacterBtn = document.getElementById('get-character');
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nameSpan.textContent = character.name;
         heightSpan.textContent = character.height;
         genderSpan.textContent = character.gender;
+        eyeColorSpan.textContent = character.eye_color;
         birthYearSpan.textContent = character.birth_year;
         homeWorldSpan.textContent = character.homeworld;
     }
