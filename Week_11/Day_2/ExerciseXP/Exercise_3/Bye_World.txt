@@ -1,0 +1,5 @@
+those 
+are
+new
+lines
+and this is the writing from the homework: Writing to the file 
