@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../DI_Bootcamp_Stage1"
+		},
+		{
+			"path": "../../../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Developer's Insititute 2023"
+	}
+}
