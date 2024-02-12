@@ -1,3 +1,3 @@
-import { colorGreet } from './colorful-message.js';
+const colorGreet = require('./colorful-message.js');
 
 colorGreet('matan');

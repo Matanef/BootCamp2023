@@ -1,7 +1,9 @@
 const chalk = require('chalk');
 
+//IMPORTANT!!!!!!  can use chalk version up to 4.1.2
 const colorGreet = (name) => {
-    console.log(chalk.blue('Hello %s'), name);
+    const colorSent = chalk.blue(`Hello ${name}`)
+    console.log(colorSent);
 };
 
-module.exports = { colorGreet };
+module.exports = colorGreet ;

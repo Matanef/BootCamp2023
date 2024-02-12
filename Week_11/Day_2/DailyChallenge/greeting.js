@@ -1,6 +1,4 @@
-const greetings = (name) =>{
+const greet = (name) =>{
     console.log(`hello, ${name}`);
 }
-module.exports = {
-    greetings,
-};
+module.exports = greet
