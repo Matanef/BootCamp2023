@@ -1,0 +1,14 @@
+{
+  "name": "crud_api",
+  "version": "1.0.0",
+  "description": "Crud_API_Learning",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "matan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
