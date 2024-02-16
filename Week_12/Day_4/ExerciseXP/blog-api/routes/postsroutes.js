@@ -4,8 +4,8 @@ const {
     getAllPosts, 
     getSearchedPostById, 
     createPost, 
-    // updatePost, 
-    // deletePost,
+    updatePost, 
+    deletePost,
 } = require('../controllers/posts.js');
 
 
@@ -18,8 +18,8 @@ const {
 router.get('/', getAllPosts)
 router.get('/:id', getSearchedPostById)
 router.post('/add', createPost)
-// router.put('/:id', updatePost)
-// router.delete('/:id', deletePost)
+router.put('/:id', updatePost)
+router.delete('/:id', deletePost)
 
 
 module.exports = router
