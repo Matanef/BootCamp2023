@@ -3,10 +3,11 @@ const {
     _getAllUsers,
     _getUserById,
     _insertNewUser,
-    // _loginUser,
+    _loginUser,
     _updateExistingUser,
     _insertHashedPassword
-} =require('../models/reglogmodels.js')
+} =require('../models/reglogmodels.js');
+const { log } = require('console');
 
 const getAllUsers = (req,res)=> {
     _getAllUsers()
@@ -76,23 +77,38 @@ const updateExistingUser = (req,res) =>{
 }
 }
 
-// const loginUser = (req,res) => {
-//     const {username, password} = req.body;
-//     _loginUser(username)
-//     .then(user =>{
-//         if(!user){
-//             return res.status(404).json('User not found')
-//         }
-//         bcrypt.compare(password, )
-//     })
+const loginUser = (req,res) => {
+    const {username, password} = req.body;
+    _loginUser(username)
+    .then(user =>{
+        if(!user){
+            return res.status(404).json('User not found')
+        }
+        bcrypt.compare(password, user.password)
+        .then(match => {
+            if(!match){
+                return res.status(401).json('Credentials do not match existing user')
+            }
+            res.status(200).json({messege: "login successful"})
+        })
+        .catch(error =>{
+            console.log('error comparing password', error);
+            res.status(500).json('failed to compare passwords')
+        })
+        .catch(err =>{
+            console.log('failed retrieve user', err);
+            res.status(500).json('failed retrieve user')
+        })
 
-// }
+    })
+
+}
 
 
 module.exports = {
     getAllUsers,
     getUserById,
     insertNewUser,
-    // loginUser,
+    loginUser,
     updateExistingUser,    
 }

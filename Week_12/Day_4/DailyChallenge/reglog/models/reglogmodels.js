@@ -29,11 +29,14 @@ const _insertHashedPassword = (password, username) => {
     return db('hashpwd').insert({password, username},['*']);
 };
 
+const _getUserByUsername = (username) => {
+    return db('hashpwd').whereILike('username', username)
+}
 module.exports = {
     _getAllUsers,
     _getUserById,
     _insertNewUser,
     _updateExistingUser,
     _insertHashedPassword,
-    // _loginUser
+    _loginUser
 }
