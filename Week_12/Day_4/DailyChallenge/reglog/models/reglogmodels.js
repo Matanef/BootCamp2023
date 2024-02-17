@@ -25,9 +25,15 @@ const _loginUser = (username) =>{
     return db('users').where({username}).first()
 }
 
+const _insertHashedPassword = (password, username) => {
+    return db('hashpwd').insert({password, username},['*']);
+};
+
 module.exports = {
     _getAllUsers,
     _getUserById,
     _insertNewUser,
-    _updateExistingUser
+    _updateExistingUser,
+    _insertHashedPassword,
+    // _loginUser
 }

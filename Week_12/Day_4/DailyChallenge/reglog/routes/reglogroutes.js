@@ -4,7 +4,7 @@ const {
     getAllUsers,
      getUserById,
       insertNewUser,
-       loginUser,
+    //    loginUser,
         updateExistingUser
     } = require('../controllers/reglogfunctions.js')
 
@@ -12,7 +12,7 @@ const {
 router.get('/', getAllUsers);
 router.get('/:id', getUserById);
 router.post('/register', insertNewUser)
-router.post('login', loginUser)
+// router.post('login', loginUser)
 router.put('/:id', updateExistingUser)
 
 module.exports = router
