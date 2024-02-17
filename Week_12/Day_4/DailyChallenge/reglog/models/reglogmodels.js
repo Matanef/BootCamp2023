@@ -22,7 +22,7 @@ const _updateExistingUser = (id, first_name, last_name, username, email) =>{
 
 
 const _loginUser = (username) =>{
-    return db('users').where({username}).first()
+    return db('hashpwd').where({username}).first()
 }
 
 const _insertHashedPassword = (password, username) => {
