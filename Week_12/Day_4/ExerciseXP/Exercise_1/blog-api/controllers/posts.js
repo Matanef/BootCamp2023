@@ -34,9 +34,10 @@ const getSearchedPostById = (req,res)=>{
 
 const createPost = (req,res) => {
   const {title, content} = req.body
+  const start = Date.now();
   _createPost(title,content)
   .then((data)=> {
-    console.log('ping Post created');
+    console.log(`${start} ping Post created`);
     res.status(201).json(data)
   })
   .catch((err) => {
