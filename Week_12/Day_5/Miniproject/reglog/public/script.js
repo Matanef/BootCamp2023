@@ -79,6 +79,21 @@ function appendToDomFail(username) {
   console.log(first_name);
 }
 
+function appendToDomUserNotExist(username) {
+  const loginfailPhrase = document.createElement("p");
+  loginfailPhrase.setAttribute("style", "width: 150px; font-size:14px; border: 1px solid black; text-align: left; padding: 6px;");
+  loginfailPhrase.innerHTML = `The username ${username} don't exist`;
+  div.append(loginfailPhrase);
+  console.log(username);
+}
+
+function appendToDomUserExist(username) {
+  const loginsuccessPhrase = document.createElement("p");
+  loginsuccessPhrase.setAttribute("style", "width: 150px; font-size:14px; border: 1px solid black; text-align: left; padding: 6px;");
+  loginsuccessPhrase.innerHTML = `Welcome back ${username}`;
+  div.append(loginsuccessPhrase);
+  console.log(username);
+}
 const loginUser = ()=> {
   loginform.addEventListener('submit', function(event){
     event.preventDefault();
@@ -89,14 +104,39 @@ const loginUser = ()=> {
       username,
       password
     };
+
     fetch("http://localhost:5001/users")
     .then((apiResp)=> apiResp.json())
     .then((data)=> {
         const usernameExists = data.some(user => user.username === username);
         console.log(usernameExists);
-    })
+        if(!usernameExists){
+          appendToDomUserNotExist(username)
+        }else{
+          fetch("http://localhost:5001/users/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(loginData),
+          })
+          .then(res => {
+            if (!res.ok) {
+              throw new Error('failed to login')
+            }
+            return res.json(`Welcome back ${username}`)
+          })
+          .then((data) => {
+            console.log('success', data);
+          })
+          .catch(err =>{
+            console.log('error' , err );
+          });
+          appendToDomUserExist(username)
+        }
+      })
 
-  }
+    }
 )}
 
 // fetch("http://localhost:5001/users", {
