@@ -38,5 +38,6 @@ module.exports = {
     _insertNewUser,
     _updateExistingUser,
     _insertHashedPassword,
-    _loginUser
+    _loginUser,
+    _getUserByUsername
 }

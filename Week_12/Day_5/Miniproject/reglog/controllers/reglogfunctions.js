@@ -5,7 +5,8 @@ const {
     _insertNewUser,
     _loginUser,
     _updateExistingUser,
-    _insertHashedPassword
+    _insertHashedPassword,
+    _getUserByUsername
 } =require('../models/reglogmodels.js');
 const { log } = require('console');
 
@@ -36,27 +37,27 @@ const getUserById = (req,res) =>{
 
 const insertNewUser = (req,res) => {
     const {first_name, last_name, username, email, password} = req.body;
-    bcrypt.hash(password, 10)
-    .then(password =>{
-        _insertNewUser(first_name, last_name, username, email)
-        .then(user => {
-            _insertHashedPassword(password, username)
-            .then(() => {
-                res.status(200).json({ message: 'User created successfully', user });
+        bcrypt.hash(password, 10)
+        .then(password =>{
+            _insertNewUser(first_name, last_name, username, email)
+            .then(user => {
+                _insertHashedPassword(password, username)
+                .then(() => {
+                    res.status(200).json({ message: 'User created successfully', user });
+                })
+                .catch(error => {
+                    console.error('Error inserting hashed password:', error);
+                    res.status(500).json({ message: 'Internal server error' });
+                });
+            }).catch(error => {
+                console.error('Error inserting new user:', error);
+                res.status(500).json({ message: 'Internal server error' });
             })
             .catch(error => {
-                console.error('Error inserting hashed password:', error);
+                console.error('Error hashing password:', error);
                 res.status(500).json({ message: 'Internal server error' });
             });
-        }).catch(error => {
-            console.error('Error inserting new user:', error);
-            res.status(500).json({ message: 'Internal server error' });
-        })
-        .catch(error => {
-            console.error('Error hashing password:', error);
-            res.status(500).json({ message: 'Internal server error' });
-        });
-    }
+        }
     )}
     
 

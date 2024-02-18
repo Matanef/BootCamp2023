@@ -11,8 +11,7 @@ const adduser = ()=> {
       const username = document.getElementById('username').value
       const password = document.getElementById('password').value
 
-      appendToDom(first_name, username);
-
+      
       const formData = {
           first_name,
           last_name,
@@ -29,35 +28,53 @@ const adduser = ()=> {
       password
   });
 
-      fetch("http://localhost:5001/users/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-      })
-      .then(res => {
-          if (!res.ok) {
-            throw new Error('failed to register user')
-          }
-          return res.json(`Welcome ${first_name}, your username is ${username}`)
-      })
-      .then((data) => {
-          console.log('success', data);
-      })
-      .catch(err =>{
-          console.log('error' , err );
-      });
-
+  fetch("http://localhost:5001/users")
+  .then((apiResp)=> apiResp.json())
+  .then((data)=> {
+      const usernameExists = data.some(user => user.username === username);
+      console.log(usernameExists);
+      if(!usernameExists){
+        fetch("http://localhost:5001/users/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(res => {
+            if (!res.ok) {
+              throw new Error('failed to register user')
+            }
+            appendToDomSuccess(first_name, username);
+            return res.json(`Welcome ${first_name}, your username is ${username}`)
+        })
+        .then((data) => {
+            console.log('success', data);
+        })
+        .catch(err =>{
+            console.log('error' , err );
+        });
+      }else {
+        appendToDomFail(username)
+      }
+  })
+  .catch(err => console.log(err))
   });
 };
 
-function appendToDom(first_name, username) {
+function appendToDomSuccess(first_name, username) {
   const welcomePhrase = document.createElement("p");
-
   welcomePhrase.setAttribute("style", " font-size:14px; border: 1px solid black; text-align: left; padding: 6px;");
   welcomePhrase.innerHTML = `Welcome ${first_name}, your username is ${username}`;
   div.append(welcomePhrase);
+  console.log(first_name);
+}
+
+function appendToDomFail(username) {
+  const failPhrase = document.createElement("p");
+  failPhrase.setAttribute("style", " font-size:14px; border: 1px solid black; text-align: left; padding: 6px;");
+  failPhrase.innerHTML = `The ${username} already exist`;
+  div.append(failPhrase);
   console.log(first_name);
 }
 
