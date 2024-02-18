@@ -48,7 +48,8 @@ const createPost = (req,res) => {
 
 
 const updatePost =(req,res)=>{
-  const {id, title, content} = req.body;
+  const id = req.params.id
+  const {title, content} = req.body;
   if({id}){
   _updatePost(id ,title,content)
   .then(data=> {
