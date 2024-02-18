@@ -1,6 +1,7 @@
 const div = document.getElementById('root');
 const adduser = ()=> {
-  const form = document.getElementById('form');
+const form = document.getElementById('form');
+const loginform = document.getElementById('loginform')
 
 
   form.addEventListener('submit', function(event){
@@ -77,6 +78,26 @@ function appendToDomFail(username) {
   div.append(failPhrase);
   console.log(first_name);
 }
+
+const loginUser = ()=> {
+  loginform.addEventListener('submit', function(event){
+    event.preventDefault();
+    const username = document.getElementById('username').value
+    const password = document.getElementById('password').value
+
+    const loginData = {
+      username,
+      password
+    };
+    fetch("http://localhost:5001/users")
+    .then((apiResp)=> apiResp.json())
+    .then((data)=> {
+        const usernameExists = data.some(user => user.username === username);
+        console.log(usernameExists);
+    })
+
+  }
+)}
 
 // fetch("http://localhost:5001/users", {
 //     method: "POST",
