@@ -1,6 +1,7 @@
-
+const div = document.getElementById('root');
 const adduser = ()=> {
   const form = document.getElementById('form');
+
 
   form.addEventListener('submit', function(event){
       event.preventDefault();
@@ -10,6 +11,8 @@ const adduser = ()=> {
       const username = document.getElementById('username').value
       const password = document.getElementById('password').value
 
+      appendToDom(first_name, username);
+
       const formData = {
           first_name,
           last_name,
@@ -18,7 +21,13 @@ const adduser = ()=> {
           password
       };
 
-    console.log(formData);
+    console.log({
+      first_name,
+      last_name,
+      email,
+      username,
+      password
+  });
 
       fetch("http://localhost:5001/users/register", {
           method: "POST",
@@ -31,7 +40,7 @@ const adduser = ()=> {
           if (!res.ok) {
             throw new Error('failed to register user')
           }
-          return res.json()
+          return res.json(`Welcome ${first_name}, your username is ${username}`)
       })
       .then((data) => {
           console.log('success', data);
@@ -42,6 +51,15 @@ const adduser = ()=> {
 
   });
 };
+
+function appendToDom(first_name, username) {
+  const welcomePhrase = document.createElement("p");
+
+  welcomePhrase.setAttribute("style", " font-size:14px; border: 1px solid black; text-align: left; padding: 6px;");
+  welcomePhrase.innerHTML = `Welcome ${first_name}, your username is ${username}`;
+  div.append(welcomePhrase);
+  console.log(first_name);
+}
 
 // fetch("http://localhost:5001/users", {
 //     method: "POST",
