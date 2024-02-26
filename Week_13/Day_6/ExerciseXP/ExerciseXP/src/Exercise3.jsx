@@ -34,7 +34,7 @@ const Exercise = () =>{
             {header}
             {paragraph}
             {link}<br></br>
-            i strongly recommend this song
+            i approve this song
             {formtitle}
             {form}
             {logo}
