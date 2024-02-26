@@ -1,0 +1,11 @@
+.userinfo {
+    display: inline-block;
+    margin: 5px;
+    border:2px solid red;
+    padding: 3px;
+    text-align: center;
+    background-color: lightcyan;
+    }
+.username  {
+    color: blueviolet
+    }
