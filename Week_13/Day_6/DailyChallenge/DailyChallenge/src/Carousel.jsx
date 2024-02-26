@@ -14,19 +14,19 @@ const Carousel1 = ()=>{
             <Carousel>
                 <div>
                     <img src={img1} />
-                    <p className="legend">Legend 1</p>
+                    <p className="legend">Hong Kong</p>
                 </div>
                 <div>
                     <img src={img2} />
-                    <p className="legend">Legend 2</p>
+                    <p className="legend">Macao</p>
                 </div>
                 <div>
                     <img src={img3} />
-                    <p className="legend">Legend 3</p>
+                    <p className="legend">Japan</p>
                 </div>
                 <div>
                     <img src={img4} />
-                    <p className="legend">Legend 4</p>
+                    <p className="legend">Las Vegas</p>
                 </div>
             </Carousel>
         </>
