@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import UserFavoriteAnimals from './UserFavoriteAnimals'
+import Exercise from './Exercise3';
+
 
 const user = {
   firstName: 'Bob',
@@ -21,13 +23,14 @@ function App() {
   return (
     <>
       <div>
-{helloWorldMsg}
-{myelement}
-{summsg}
-{summsg2}
-{firstname}
-{lastname}
-<UserFavoriteAnimals favAnimals={user.favAnimals}/>
+        <Exercise/>
+        {helloWorldMsg}
+        {myelement}
+        {summsg}
+        {summsg2}
+        {firstname}
+        {lastname}
+        <UserFavoriteAnimals favAnimals={user.favAnimals}/>
       </div>
 
     </>
