@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import car_info from '../App'
+import Garage from './Garage';
 
 const Car = (props)=> {
-    const {name, model} = props.carinfo
+    const color = useState('Red')
+
+     
+    const {name, model} = props.carinfo;
+    
     return (
         <>
-    <h2>Brand: {name}</h2>
-    <p>Model: {model}</p>
+            <h1>Car information</h1>
+            <h2>Brand: {name}</h2>
+            <p>Model: {model}</p>
+            <p>Color: {color}</p>
+            <Garage size="small"/>
     </>
-    )
+    );
 }
 
-export default Car
+export default Car;

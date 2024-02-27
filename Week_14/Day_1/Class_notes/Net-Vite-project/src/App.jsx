@@ -11,9 +11,13 @@ function App() {
   return (
     <>
     {users.map(item => {
-      return <User key={item.id}
-      id={item.id}
-       name={item.name} username={item.username} email={item.email}/>
+      return (
+      <User key={item.id}
+        id={item.id}
+        name={item.name}
+        username={item.username} 
+        email={item.email}/>
+      );
     })}
     </>
   )
