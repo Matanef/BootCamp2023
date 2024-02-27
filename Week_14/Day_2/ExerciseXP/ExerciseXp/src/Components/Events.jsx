@@ -5,8 +5,14 @@ const Events = () =>{
         alert ('i was clicked')
     }
 
+    const [isToggleOn, setIsToggleOn] = useState(true);
     const [message, setMessage] = useState('');
 
+    const handleToggle = () =>{
+        setIsToggleOn(prevState => !prevState)
+    }
+
+    //input data
     const handleChange = event => {
         event.preventDefault()
         setMessage(event.target.value);
@@ -29,6 +35,7 @@ const Events = () =>{
             <label>please enter a word</label><br></br>
             <input onKeyDown={handleKeyDown} onChange={handleChange} value={message}></input><br></br>
         </form>
+        <button onClick={handleToggle}>{isToggleOn ? 'ON': 'Off'}</button>
         </>
         )
 }
