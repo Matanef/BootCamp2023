@@ -1,12 +1,24 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 
 const Events = () =>{
     const clickMe = () =>{
         alert ('i was clicked')
     }
+
+    const [message, setMessage] = useState('');
+
+    const handleChange = event => {
+        event.preventDefault()
+        setMessage(event.target.value);
+  
+    //   console.log('value is:', event.target.value);
+    };
+
     const handleKeyDown = (event)=>{
-        if(event.key ==='Enter')
-        alert ('The enter Key was pressed, your input is')
+        
+        if(event.key ==='Enter'){
+        alert (`The enter Key was pressed, your input is: ${message}`)
+        }
     }
     return (
         <>
@@ -15,7 +27,7 @@ const Events = () =>{
         </button><br></br>
         <form>
             <label>please enter a word</label><br></br>
-            <input onKeyDown={handleKeyDown} ></input><br></br>
+            <input onKeyDown={handleKeyDown} onChange={handleChange} value={message}></input><br></br>
         </form>
         </>
         )
