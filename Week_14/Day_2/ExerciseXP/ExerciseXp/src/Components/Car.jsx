@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import car_info from '../App'
+import carinfo from '../App'
 import Garage from './Garage';
 
 const Car = (props)=> {
