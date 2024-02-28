@@ -9,6 +9,13 @@ const Phone = () =>{
             year: 2020
         });
         // console.log(phoneInfo);
+        
+        const changeColor  = () =>{
+            setPhoneInfo(prevState => ({...prevState, color: 'Blue'}))
+        }
+
+        //prevState keep the previous values
+        
     return (
         <>
         <h2>Phone Information</h2>
@@ -21,6 +28,7 @@ const Phone = () =>{
         <p>My phone is a {phoneInfo.brand} phone</p>
         <p>it is a {phoneInfo.color} {phoneInfo.model} from {phoneInfo.year}</p>
         </div>
+        <button onClick={changeColor}>Switch Color</button>
 
         </>
         )
