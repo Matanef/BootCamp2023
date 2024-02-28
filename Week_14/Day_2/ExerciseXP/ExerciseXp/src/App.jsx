@@ -4,6 +4,7 @@ import Car from './Components/Car';
 import Garage from './Components/Garage';
 import Events from './Components/Events';
 import Phone from './Components/Phone';
+import Color from './Components/Color';
 
 
 const carinfo = {name: "Ford", model: "Mustang"};
@@ -15,6 +16,7 @@ function App() {
 <Car carinfo={carinfo}/>
 <Events />
 <Phone />
+<Color />
     </>
   )
 }
