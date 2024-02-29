@@ -11,6 +11,7 @@ const carinfo = {name: "Ford", model: "Mustang"};
 
 function App() {
 
+
   return (
     <>
 <Car carinfo={carinfo}/>
