@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,6 +6,7 @@ function App() {
   const [count2, setCount2] = useState(0)
   const [count3, setCount3] = useState(0)
   const [count4, setCount4] = useState(0)
+
   const [languages, setLanguages] = useState([
     {name: "Php", votes: 0},
     {name: "Python", votes: 0},
@@ -21,24 +20,28 @@ function App() {
 
       <div className="card">
         <div className='card1'>
-        <button onClick={() => setCount1((count) => count + 1)}>
-          count is {count1}
-        </button>
+          <button onClick={() => setCount1((count) => count + 1)}>
+            Click here {count1}
+            <p>{languages[0].name}</p>
+          </button>
         </div>
         <div className='card2'>
-        <button onClick={() => setCount2((count) => count + 1)}>
-          count is {count2}
-        </button>
+          <button onClick={() => setCount2((count) => count + 1)}>
+            Click Here {count2}
+            <p>{languages[1].name}</p>
+          </button>
         </div>
         <div className='card3'>
-        <button onClick={() => setCount3((count) => count + 1)}>
-          count is {count3}
-        </button>
+          <button onClick={() => setCount3((count) => count + 1)}>
+            Click Here {count3}
+            <p>{languages[2].name}</p>
+          </button>
         </div>
         <div className='card4'>
-        <button onClick={() => setCount4((count) => count + 1)}>
-          count is {count4}
-        </button>
+          <button onClick={() => setCount4((count) => count + 1)}>
+            Click Here {count4}
+            <p>{languages[3].name}</p>
+          </button>
         </div>
       </div>
 
