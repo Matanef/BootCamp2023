@@ -5,10 +5,6 @@ import Quote from './Components/Quote'
 
 function App() {
 
-  // const some = quotes.map(Math.floor(Math.random()))
-  // console.log(some);
-  // console.log(quotes[8].author);
-
 
   return (
     <>

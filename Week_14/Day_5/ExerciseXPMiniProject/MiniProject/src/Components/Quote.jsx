@@ -18,7 +18,7 @@ const Quote = ({quotes})=>{
 
     return (
         <>
-        <div style={{width: '550px', height: '250px', backgroundColor: 'purple', position: 'relative'}}> 
+        <div style={{border: '3px solid green', borderRadius:'5px', width: '550px', height: '250px', backgroundColor: 'purple', position: 'relative'}}> 
         <h3 style={{color: 'black'}}>"{quotes[quoteIndex].quote}"</h3>
         <h3>{quotes[quoteIndex].author}</h3>
         <button onClick={changequote} style={{ position: 'absolute' , right:15, backgroundColor: 'grey'}}>Generate</button>
