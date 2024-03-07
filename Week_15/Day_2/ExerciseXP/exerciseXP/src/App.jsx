@@ -21,16 +21,18 @@ function App() {
         <ErrorBoundary>
         <Link to={'/profile'}>Profile</Link>
         </ErrorBoundary>
-        <ErrorBoundary>
         <Link to={'/shop'}>Shop</Link>
+        <ErrorBoundary>
+        <Link to={'/posts.json'}>posts</Link>
         </ErrorBoundary>
       </nav>
     </div>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/profile' element={<Profile/>}/>
-      <Route path='/shop' element={<Shop/>}/>
+      <Route path='/shop' element={<ErrorBoundary><Shop/></ErrorBoundary>}/>
       <Route path='*' element={<h2>404 Not Found</h2>}/>
+      <Route path='/posts.json' element={<PostList/>}/>
       
     </Routes>
     <PostList />

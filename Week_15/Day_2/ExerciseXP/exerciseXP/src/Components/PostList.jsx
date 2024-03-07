@@ -1,28 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import postsData from './posts.json'
 
 
 const PostList = () => {
     const [posts, setPosts] = useState([]);
+    console.log(posts);
 
     useEffect(() => {
-        fetchPosts();
+        setPosts(postsData);
+        console.log(posts);
     }, []);
 
-    const fetchPosts = async () => {
-        try {
-            const resp = await fetch('./posts.json');
-            const data = await resp.json();
-            setPosts(data);
-        } catch (error) {
-            console.log('Error fetching posts:', error);
-        }
-    };
 
     return (
         <div>
-            <h1>Posts List</h1>
+            <h1>This is a title</h1>
             <ul>
-                {posts.map((post) => (
+                {posts.map(post => (
                     <li key={post.id}>
                         <h2>{post.title}</h2>
                         <p>{post.content}</p>
