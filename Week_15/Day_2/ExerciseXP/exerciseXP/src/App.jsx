@@ -5,6 +5,7 @@ import Profile from './Components/Profile'
 import Shop from './Components/Shop'
 import { Routes, Route, Link } from 'react-router-dom'
 import ErrorBoundary from './Components/ErrorBoundary.jsx'
+import PostList from './Components/PostList.jsx'
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
       <Route path='*' element={<h2>404 Not Found</h2>}/>
       
     </Routes>
+    <PostList />
+
 
     </>
   )
