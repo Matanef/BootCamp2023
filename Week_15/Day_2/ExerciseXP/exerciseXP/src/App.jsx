@@ -22,11 +22,12 @@ const fetchData = async () => {
       age: 27
     };
 
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const resp = await fetch(proxyUrl + url, {
-      method: 'POST',
+    const resp = await fetch(url, {
+      method: 'post',
+      mode: 'no-cors',
       headers: {
-        'Content-Type': 'application/json'
+        'Accept': 'application/json',
+        'Content-type': 'application/json'
       },
       body: JSON.stringify(dataToSend)
     });

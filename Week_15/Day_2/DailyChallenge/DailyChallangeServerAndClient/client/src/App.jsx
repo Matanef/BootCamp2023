@@ -1,81 +1,51 @@
-import React from "react";
+import React, { useState, createContext, useRef } from "react";
 import "./App.css";
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      inputValue: "",
-      serverResponse: "",
-    };
+
+export const AppContext = createContext()
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  let name = 'John'
+  const changeJohn = () =>{
+    name= 'Dan';
+    console.log("name=>", name);
   }
-
-
-  //handle the first response of the server which supposed to be "Hello from express"
-  componentDidMount() {
-    //Calling the callback function
-    this.fetchServerResponse();
-  }
-
-  //callback function
-  fetchServerResponse = async () => {
-    try {
-      //waiting for server response to get the data
-      const response = await fetch("/api/hello");
-      console.log(response);
-      if (!response.ok) {
-        throw new Error("Faild to fetch messege from server");
-      }
-      //
-      const data = await response.text();
-      console.log(data);
-      //issue with the recieved data
-      this.setState({ serverResponse: data });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-//handling the sumbit event
-  handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("/api/world", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ value: this.state.inputValue }),
-      });
-      const data = await response.text();
-      this.setState({ serverResponse: data });
-    } catch (error) {
-      console.log("error", error);
-    }
-  };
-
-  handleChange = (e) => {
-    this.setState({ inputValue: e.target.value });
-  };
-
-  render() {
-    return (
-      <div>
-        <p>{this.state.serverResponse}</p>
-        <h1>ReactApp</h1>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.inputValue}
-            onChange={this.handleChange}
-          />
-          <button type="submit">Submit</button>
-        </form>
-        {this.state.serverResponse && (
-          <p>Server response: {this.state.serverResponse}</p>
-        )}
-      </div>
-    );
-  }
+  return (
+    <>
+    <div>
+      <h2>useRef</h2>
+      <button onClick={() => setCount(count + 1)}> + {count}</button>
+    </div>
+    <div>
+      <h2>{name}</h2>
+      <button onClick={()=> changeJohn}>Change John</button>
+    </div>
+    </>
+  )
 }
 
 export default App;
+
+
+// function App() {
+//   const [msg, setMsg] = useState('')
+
+//   const getMsgFromServer = async() =>{
+//     try{
+//       const res = await fetch('');
+//       const messege = await res.json();
+//       setMsg(messege.messege);
+//     }catch(error){
+//       console.log(error);
+//     }
+//   }
+// return(
+//   <>
+//   <div>
+//     <h2>{msg}</h2>
+//   </div>
+//   </>
+// )
+// }
