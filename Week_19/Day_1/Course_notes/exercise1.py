@@ -45,7 +45,7 @@ print("hello" *3)
 number = int(input('Plase enter a number between 1-100: '))
 numberthree = 3
 numberfive = 5
-if number % (numberthree * numberfive) ==0:
+if number % (numberthree * numberfive) == 0:
     print('FizzBuzz')
 elif number % numberthree == 0:
     print('Fizz')

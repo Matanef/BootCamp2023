@@ -1,0 +1,75 @@
+x=[2,34,-5,5,3,2,1,4,5,-7]
+max= max(x)
+min = min(x)
+print(min, max)
+for num in x:
+    if num>max:
+        max=num
+    if num<min:
+        min = num
+print(f"max:{max},\nmin: {min}")
+num = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(f"{num} x {i} = {num*i}")
+password = ''
+while password != 'hello-world-123':
+  password = input('What is the top secret password? ')
+# print('You guessed the right password!')
+counter=1
+while True:
+  if counter > 99:
+    break
+  if counter%2 == 0:
+    counter+=1
+    continue
+  print(counter)
+  active = True
+while active:
+    city = input("Please enter the name of a city you have visited (enter 'quit' when you are finished): ")
+    if city == 'quit':
+        active = False
+    elif city == 'leave me alone':
+        active = False
+    elif city == 'stop':
+        active = False
+    else:
+        print("I'd love to go to", city)
+print("Goodbye !")
+# Question: Write a program that asks the user to enter a word.
+# If the word is "python", print "You guessed the right word!"
+# Otherwise, keep asking the user to guess the word until they get it right.
+word = ''
+while word != 'python':
+    word = input('Guess the word: ')
+    if word == 'python':
+        print('You guessed the right word!')
+    else:
+        print('Try again.')
+# Question: Write a program that takes a list of strings and finds all the palindromes in the list.
+# A palindrome is a word that reads the same backward as forward. Print each palindrome found in the list.
+# Answer without using list comprehensions:
+strings = ["level", "world", "maddam", "python", "racecar", "hello", "civic"]
+palindromes = []
+for s in strings:
+    is_palindrome = True
+    for i in range(len(s) // 2):
+        if s[i] != s[-(i + 1)]:
+            is_palindrome = False
+            break
+    if is_palindrome:
+        palindromes.append(s)
+for palindrome in palindromes:
+    print(palindrome)
+active = True
+while True:
+    city = input("Please enter the name of a city you have visited (enter 'quit' when you are finished): ")
+    if city == 'quit':
+        active = False
+    elif city == 'leave me alone':
+        active = False
+        break
+    elif city == 'stop':
+        active = False
+    else:
+        print("I'd love to go to", city)
+print("Goodbye !")
