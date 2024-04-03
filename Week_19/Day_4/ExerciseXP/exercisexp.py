@@ -242,18 +242,33 @@ print(evennumbers)
 # print(sum_price)
 
 
-restricted = range(16, 22)
-names = ["Johnny", "Dexter", "Bubbles", "Edd"]
-for member in names[:]:
-    age = int(input(f"{member}, what is yout age, answer honestly... "))
-    if age in restricted:
-        print("You can watch the movie")
-    elif age >22:
-        print("according to the instructions you are to old to  see this movie, sorry")
-        names.remove(member)
-    else:
-        print(f"{member}, you are to young to watch the movie")
-        names.remove(member)
-print(names)
+# restricted = range(16, 22)
+# names = ["Johnny", "Dexter", "Bubbles", "Edd"]
+# for member in names[:]:
+#     age = int(input(f"{member}, what is yout age, answer honestly... "))
+#     if age in restricted:
+#         print("You can watch the movie")
+#     elif age >22:
+#         print("according to the instructions you are to old to  see this movie, sorry")
+#         names.remove(member)
+#     else:
+#         print(f"{member}, you are to young to watch the movie")
+#         names.remove(member)
+# print(names)
 
 
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+
+while "Pastrami sandwich" in sandwich_orders:
+    sandwich_orders.remove("Pastrami sandwich")
+    # i left this in this level to show each element is being detected and deleted
+    print(sandwich_orders)
+print("all Pastrami sandwich have been removed from the list")
+
+finished_sandwiches = []
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
+    print("sandwich that is being ""made"" and is removed from sandwich_orders",sandwich)
+    print("remaining sandwiches in sandwich_orders", sandwich_orders)
+    finished_sandwiches.append(sandwich)
+    print("finished_sandwiches", finished_sandwiches)
