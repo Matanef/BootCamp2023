@@ -99,10 +99,10 @@ numlist = []
 for element in range(3, 11):
     if element<= 10:
         numlist.append(element/2)
-print(numlist)
+print("numlist ==>", numlist)
 
 numlist2 = [x/2 for x in range(3,11)]
-print(numlist2)
+print("numlist2 ==>",numlist2)
 
 # 🌟 Exercise 5: For Loop
 # Instructions
@@ -242,11 +242,11 @@ print(evennumbers)
 # print(sum_price)
 
 
-# restricted = range(16, 22)
+# age_restricted = range(16, 22)
 # names = ["Johnny", "Dexter", "Bubbles", "Edd"]
 # for member in names[:]:
 #     age = int(input(f"{member}, what is yout age, answer honestly... "))
-#     if age in restricted:
+#     if age in agw_restricted:
 #         print("You can watch the movie")
 #     elif age >22:
 #         print("according to the instructions you are to old to  see this movie, sorry")

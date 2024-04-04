@@ -21,7 +21,7 @@ for i in range(len(string)):
 
 newsentece = list(string)
 shufflelist = [[i]for i in range(len(newsentece))]
-shuffle(shufflelist)
+shuffle("shufflelist ==>",shufflelist)
 print(shufflelist)
 # jumbled = shuffle(newsentece)
 # print(jumbled)
