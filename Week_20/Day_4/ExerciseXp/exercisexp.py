@@ -119,29 +119,41 @@ points = []
 wrong_answers = []
 
 def ask_question():
-    for questions in data:
-        print(len(questions))
-        while questions < len(questions):
-            for key in questions.keys():
-                    while key == "question":
-                        user_answer = input(f"{key.capitalize()}: {questions[key]} ")
-                        if user_answer.capitalize() == questions["answer"]:
-                            points.append(1)
-                            print ("You answered correctly")
-                            # print(answer)
-                            # print(points)
-                        else:
-                            wrong_answers.append(1)
-                            print("wrong_answers", wrong_answers)
-                        
-                    
-    return points, wrong_answers
+    for question in data:
+        user_answer = input(f"{question['question']}:")
+        if user_answer.capitalize() == question["answer"]:
+            points.append(1)
+            print ("You answered correctly")
+            # print(answer)
+            # print(points)
+        else:
+            wrong_answers.append(question)
+            print("You answered wrong")
             
 
 def count_and_notify():
-    count_right = len(points)
-    count_wrong = len(wrong_answers)
-    return (f"Total Score:\n Correct Answers: {count_right}, Wrong Answers: {count_wrong} ")
+    count_right = int(len(points))
+    count_wrong = int(len(wrong_answers))
+    print (f"Total Score:\n Correct Answers: {count_right}, Wrong Answers: {count_wrong} ")
+    if count_wrong>= 3:
+        user_answer = input("Would you like to play again? Y/N: ")
+        if user_answer.lower() != 'y' and user_answer.lower() !='n':
+            input('Please enter only Y or N: ')
+        elif user_answer.lower() == 'y' or user_answer == 'Y':
+            points.clear()
+            wrong_answers.clear()
+            run_quiz()
+        else:
+            print('Thanks for playing')
+
+
+
+def run_quiz():
+     ask_question()
+     print(count_and_notify())
+
+c=run_quiz()
+print(c)
 
 # print(points)
 # x = ask_question()    
@@ -149,3 +161,10 @@ def count_and_notify():
 
 # y = count_and_notify()
 # print(y)
+
+
+def get_age(year, month, day):
+    current_year = 2024
+    current_month = 4
+    return(current_year)
+x= get_age(1)
