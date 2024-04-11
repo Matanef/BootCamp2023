@@ -1,4 +1,5 @@
 import random
+import datetime
 
 # Exercise 1 : Temperature Advice
 
@@ -89,71 +90,71 @@ import random
 
 # Exercise 2 : Star Wars Quiz:
 
-data = [
-    {
-        "question": "What is Baby Yoda's real name?",
-        "answer": "Grogu"
-    },
-    {
-        "question": "Where did Obi-Wan take Luke after his birth?",
-        "answer": "Tatooine"
-    },
-    {
-        "question": "What year did the first Star Wars movie come out?",
-        "answer": "1977"
-    },
-    {
-        "question": "Who built C-3PO?",
-        "answer": "Anakin Skywalker"
-    },
-    {
-        "question": "Anakin Skywalker grew up to be who?",
-        "answer": "Darth Vader"
-    },
-    {
-        "question": "What species is Chewbacca?",
-        "answer": "Wookiee"
-    }
-]
-points = []
-wrong_answers = []
+# data = [
+#     {
+#         "question": "What is Baby Yoda's real name?",
+#         "answer": "Grogu"
+#     },
+#     {
+#         "question": "Where did Obi-Wan take Luke after his birth?",
+#         "answer": "Tatooine"
+#     },
+#     {
+#         "question": "What year did the first Star Wars movie come out?",
+#         "answer": "1977"
+#     },
+#     {
+#         "question": "Who built C-3PO?",
+#         "answer": "Anakin Skywalker"
+#     },
+#     {
+#         "question": "Anakin Skywalker grew up to be who?",
+#         "answer": "Darth Vader"
+#     },
+#     {
+#         "question": "What species is Chewbacca?",
+#         "answer": "Wookiee"
+#     }
+# ]
+# points = []
+# wrong_answers = []
 
-def ask_question():
-    for question in data:
-        user_answer = input(f"{question['question']}:")
-        if user_answer.capitalize() == question["answer"]:
-            points.append(1)
-            print ("You answered correctly")
-            # print(answer)
-            # print(points)
-        else:
-            wrong_answers.append(question)
-            print("You answered wrong")
+# def ask_question():
+#     for question in data:
+#         user_answer = input(f"{question['question']}:")
+#         if user_answer.capitalize() == question["answer"]:
+#             points.append(1)
+#             print ("You answered correctly")
+#             # print(answer)
+#             # print(points)
+#         else:
+#             wrong_answers.append(question)
+#             print("You answered wrong")
             
 
-def count_and_notify():
-    count_right = int(len(points))
-    count_wrong = int(len(wrong_answers))
-    print (f"Total Score:\n Correct Answers: {count_right}, Wrong Answers: {count_wrong} ")
-    if count_wrong>= 3:
-        user_answer = input("Would you like to play again? Y/N: ")
-        if user_answer.lower() != 'y' and user_answer.lower() !='n':
-            input('Please enter only Y or N: ')
-        elif user_answer.lower() == 'y' or user_answer == 'Y':
-            points.clear()
-            wrong_answers.clear()
-            run_quiz()
-        else:
-            print('Thanks for playing')
+# def count_and_notify():
+#     count_right = int(len(points))
+#     count_wrong = int(len(wrong_answers))
+#     print (f"Total Score:\n Correct Answers: {count_right}, Wrong Answers: {count_wrong} ")
+#     if count_wrong>= 3:
+#         user_answer = input("Would you like to play again? Y/N: ")
+#         if user_answer.lower() != 'y' and user_answer.lower() !='n':
+#             input('Please enter only Y or N: ')
+#         elif user_answer.lower() == 'y' or user_answer == 'Y':
+#             points.clear()
+#             wrong_answers.clear()
+#             run_quiz()
+#         else:
+#             print('Thanks for playing')
 
 
 
-def run_quiz():
-     ask_question()
-     print(count_and_notify())
+# def run_quiz():
+#      ask_question()
+#      print(count_and_notify())
 
-c=run_quiz()
-print(c)
+# c=run_quiz()
+# print(c)
 
 # print(points)
 # x = ask_question()    
@@ -164,7 +165,43 @@ print(c)
 
 
 def get_age(year, month, day):
-    current_year = 2024
-    current_month = 4
-    return(current_year)
-x= get_age(1)
+    # using datetime to import time information
+    current_date = datetime.datetime.now()
+    # using datetime to sset the current year
+    current_year = current_date.year
+    print(current_year)
+    current_month = current_date.month
+    print(current_month)
+    # age = current year - input
+    age = current_year - year
+    # if the birth month is after the current month if so that means the person didn't had birthday this year 
+    if month > current_month or (month == current_month and day >current_date.day):
+        age -= 1
+    return age
+
+# Hard coding the time but can be done with inouts from the user
+birth_year = 1984
+birth_month = 8
+birth_day = 24
+# age = get_age(birth_year, birth_month, birth_day)
+# print(age)
+
+
+
+def can_retire(gender, date_of_birth):
+    print(date_of_birth)
+    age = get_age(birth_year, birth_month, birth_day)
+    if gender == 'm':
+        retire_age_m = 67 - age
+        print(f'You have {retire_age_m} years until you can retire')
+    elif gender == 'f':
+        retire_age_f = 62 - age
+        print(f'You have {retire_age_f} years until you can retire')
+    else:
+        print('You are old enought to retire')
+
+
+
+gender_user = 'f'
+date_of_birth_user = f"{birth_day}/{birth_month}/{birth_year}"
+check = can_retire(gender_user, date_of_birth_user)
