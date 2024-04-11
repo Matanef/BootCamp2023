@@ -205,10 +205,13 @@ def can_retire(gender, date_of_birth):
             print('You are old enough to retire')
 
     else:
-        print('Please select "M" or "F"')
+        print('Please select "m" or "f"')
 
 
 
 gender_user = 'm'
 date_of_birth_user = f"{birth_day}/{birth_month}/{birth_year}"
 check = can_retire(gender_user, date_of_birth_user)
+
+
+
