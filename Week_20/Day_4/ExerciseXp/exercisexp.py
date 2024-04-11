@@ -193,15 +193,22 @@ def can_retire(gender, date_of_birth):
     age = get_age(birth_year, birth_month, birth_day)
     if gender == 'm':
         retire_age_m = 67 - age
-        print(f'You have {retire_age_m} years until you can retire')
+        if retire_age_m > 0:
+            print(f'You have {retire_age_m} years until you can retire')
+        else:
+            print('You are old enough to retire')
     elif gender == 'f':
         retire_age_f = 62 - age
-        print(f'You have {retire_age_f} years until you can retire')
+        if retire_age_f > 0:
+            print(f'You have {retire_age_f} years until you can retire')
+        else:
+            print('You are old enough to retire')
+
     else:
-        print('You are old enought to retire')
+        print('Please select "M" or "F"')
 
 
 
-gender_user = 'f'
+gender_user = 'm'
 date_of_birth_user = f"{birth_day}/{birth_month}/{birth_year}"
 check = can_retire(gender_user, date_of_birth_user)
