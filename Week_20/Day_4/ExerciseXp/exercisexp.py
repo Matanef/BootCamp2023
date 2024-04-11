@@ -1,6 +1,8 @@
 import random
 import datetime
 
+from functools import reduce
+
 # Exercise 1 : Temperature Advice
 
 # def get_random_temp(season):
@@ -164,54 +166,65 @@ import datetime
 # print(y)
 
 
-def get_age(year, month, day):
-    # using datetime to import time information
-    current_date = datetime.datetime.now()
-    # using datetime to sset the current year
-    current_year = current_date.year
-    print(current_year)
-    current_month = current_date.month
-    print(current_month)
-    # age = current year - input
-    age = current_year - year
-    # if the birth month is after the current month if so that means the person didn't had birthday this year 
-    if month > current_month or (month == current_month and day >current_date.day):
-        age -= 1
-    return age
+# def get_age(year, month, day):
+#     # using datetime to import time information
+#     current_date = datetime.datetime.now()
+#     # using datetime to sset the current year
+#     current_year = current_date.year
+#     print(current_year)
+#     current_month = current_date.month
+#     print(current_month)
+#     # age = current year - input
+#     age = current_year - year
+#     # if the birth month is after the current month if so that means the person didn't had birthday this year 
+#     if month > current_month or (month == current_month and day >current_date.day):
+#         age -= 1
+#     return age
 
-# Hard coding the time but can be done with inouts from the user
-birth_year = 1984
-birth_month = 8
-birth_day = 24
-# age = get_age(birth_year, birth_month, birth_day)
-# print(age)
-
-
-
-def can_retire(gender, date_of_birth):
-    print(date_of_birth)
-    age = get_age(birth_year, birth_month, birth_day)
-    if gender == 'm':
-        retire_age_m = 67 - age
-        if retire_age_m > 0:
-            print(f'You have {retire_age_m} years until you can retire')
-        else:
-            print('You are old enough to retire')
-    elif gender == 'f':
-        retire_age_f = 62 - age
-        if retire_age_f > 0:
-            print(f'You have {retire_age_f} years until you can retire')
-        else:
-            print('You are old enough to retire')
-
-    else:
-        print('Please select "m" or "f"')
+# # Hard coding the time but can be done with inouts from the user
+# birth_year = 1984
+# birth_month = 8
+# birth_day = 24
+# # age = get_age(birth_year, birth_month, birth_day)
+# # print(age)
 
 
 
-gender_user = 'm'
-date_of_birth_user = f"{birth_day}/{birth_month}/{birth_year}"
-check = can_retire(gender_user, date_of_birth_user)
+# def can_retire(gender, date_of_birth):
+#     print(date_of_birth)
+#     age = get_age(birth_year, birth_month, birth_day)
+#     if gender == 'm':
+#         retire_age_m = 67 - age
+#         if retire_age_m > 0:
+#             print(f'You have {retire_age_m} years until you can retire')
+#         else:
+#             print('You are old enough to retire')
+#     elif gender == 'f':
+#         retire_age_f = 62 - age
+#         if retire_age_f > 0:
+#             print(f'You have {retire_age_f} years until you can retire')
+#         else:
+#             print('You are old enough to retire')
+
+#     else:
+#         print('Please select "m" or "f"')
 
 
+
+# gender_user = 'm'
+# date_of_birth_user = f"{birth_day}/{birth_month}/{birth_year}"
+# check = can_retire(gender_user, date_of_birth_user)
+
+
+
+calc_list = []
+def calculations(number):
+    real_calc = number + number*11 +number*111 +number*1111
+    return real_calc
+
+
+
+number_user = int(input("please enter a number"))
+check = calculations(number_user)
+print(check)
 
