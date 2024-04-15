@@ -43,7 +43,7 @@ def diaplay_word(word, guessed_letters):
     display = ""
     for letter in word:
         if letter in guessed_letters:
-            display += letter +""
+            display += letter 
         else:
             display += "_ "
     return display
@@ -52,6 +52,7 @@ def hangman():
     print("Hangman")
     word = enter_a_word()
     guessed_letters = []
+    guess_attempts = []
     attempts = 4
 
     while attempts > 0:
@@ -70,6 +71,7 @@ def hangman():
             continue
 
         guessed_letters.append(guess)
+        print("guessed_letters", guessed_letters)
 
         if guess not in word:
             attempts -= 1
@@ -86,13 +88,13 @@ def hangman():
             print("Congratulations! you guessed the word", word)
             break
 
-        play_again = input("Would you like to  try again? y/n")
-        if play_again.lower == "y":
-            hangman()
-        elif play_again.lower == "n":
-            print("Thank you for playing hangman, Sleep tight")
-        else:
-            input("Please type only y/Y or n/N")
+    play_again = input("Would you like to  try again? y/n")
+    if play_again == "y":
+        hangman()
+    elif play_again == "n":
+        print("Thank you for playing hangman, Sleep tight")
+    else:
+        input("Please type only y/Y or n/N")
             
 
 hangman()
