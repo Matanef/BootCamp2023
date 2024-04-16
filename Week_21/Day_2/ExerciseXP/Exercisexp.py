@@ -72,3 +72,63 @@ for dog in dogs:
         max_height= dog.height
         larger = dog
 print(f"this is the bigger dog:", larger)
+
+
+
+# Exercise 3 : Who’s the song producer?
+
+class Song():
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
+        print(lyrics)
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
+
+            
+            
+
+stairway= Song(["There’s a lady who's sure","all that glitters is gold", "and she’s buying a stairway to heaven"])
+# print(stairway)
+print(stairway.sing_me_a_song())
+
+# Exercise 4 : Afternoon at the Zoo
+
+
+class Zoo():
+    def __init__(self, zoo_name):
+        self.animals = []
+        self.name = zoo_name
+    def __str__(self):
+        return (self.name)
+    def add_animal(self, new_animal):
+        self.new_animal = new_animal
+        if new_animal not in self.animals:
+            self.animals.append(new_animal)
+        return self.animals
+    def get_animals(self):
+        for animal in self.animals:
+            print(animal)
+    def sell_animal(self, animal_sold):
+        self.animal_sold = animal_sold
+        if animal_sold in self.animals:
+            self.animals.remove(animal_sold)
+            print(f"the animal that was sold is: {animal_sold}\n the current zoo: {self.animals}")
+    def sort_animals(self):
+        sorted_animals = {}
+        for animal in self.animals:
+            first_letter = animal[0].lower()
+            if first_letter in sorted_animals:
+                sorted_animals[first_letter].append(animal)
+            else:
+                sorted_animals[first_letter]= [animal]
+        return sorted_animals
+
+
+    
+zoo1 =  Zoo("Shmulik")
+print(zoo1.add_animal("Iguana"))
+print(zoo1.add_animal("Elephant"))
+print(zoo1.get_animals())
+print(zoo1.sell_animal("Elephant"))
+print(zoo1.sort_animals())
