@@ -137,7 +137,8 @@ class Zoo():
 
 
 
-
+# zoo1 = ramat_gan_safari
+# i just checked myself throughout the exercise and called it "zoo1"
     
 zoo1 =  Zoo("Shmulik")
 print(zoo1.add_animal("Iguana"))
